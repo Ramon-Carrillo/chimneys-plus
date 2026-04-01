@@ -197,8 +197,11 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5">
               <Shield className="h-3.5 w-3.5 text-brand-orange/60" />
-              Licensed &amp; Insured
+              {/* TODO: Replace "Licensed Wisconsin Contractor" with real license number once confirmed.
+                  Format: "Lic. #123456789" — look up at dsps.wi.gov */}
+              Licensed Wisconsin Contractor
             </span>
+            {/* TODO: Confirm correct ZIP code with client */}
             <span>Madison, WI 53703</span>
           </div>
         </div>

@@ -116,6 +116,7 @@ export default function ContactPage() {
                       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                         Hours
                       </p>
+                      {/* TODO: Confirm actual business hours with client before launch */}
                       <p className="mt-0.5 text-sm text-foreground">
                         Mon – Fri: 7 am – 6 pm
                       </p>

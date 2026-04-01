@@ -71,28 +71,37 @@ export async function submitContactForm(
     }
   }
 
-  // ── Swap this block for your email provider ────────────────────
+  // ── Formspree email delivery ───────────────────────────────────
   //
-  //   Formspree (no backend needed):
-  //     await fetch('https://formspree.io/f/{YOUR_FORM_ID}', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-  //       body: JSON.stringify(result.data),
-  //     })
+  // Submissions POST to Formspree and are forwarded to
+  // chimneyspluswisco@gmail.com. The form ID is public by design —
+  // Formspree endpoints are meant to be used from front-end code.
   //
-  //   Resend (node mailer alternative):
-  //     await resend.emails.send({
-  //       from: 'no-reply@chimneysplus.com',
-  //       to: 'chimneyspluswisco@gmail.com',
-  //       subject: `New estimate request from ${result.data.name}`,
-  //       html: `<pre>${JSON.stringify(result.data, null, 2)}</pre>`,
-  //     })
-  //
-  //   EmailJS (client-side alternative — move logic to ContactForm):
-  //     emailjs.send(SERVICE_ID, TEMPLATE_ID, result.data, PUBLIC_KEY)
-  //
+  // To change the notification email or add spam filters, log in to
+  // https://formspree.io and edit the "Chimneys Plus Contact" form.
   // ──────────────────────────────────────────────────────────────
-  console.log('[Contact Form Submission]', result.data)
+
+  const res = await fetch('https://formspree.io/f/xlgolerq', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(result.data),
+  })
+
+  if (!res.ok) {
+    // Formspree returned a non-2xx status (e.g. rate limit, bad config).
+    // Log the body in dev so you can diagnose quickly.
+    if (process.env.NODE_ENV !== 'production') {
+      console.error('[Formspree error]', await res.text())
+    }
+    return {
+      status: 'error',
+      message:
+        'There was a problem sending your message. Please call us directly at (608)\u00a0738-1268.',
+    }
+  }
 
   return {
     status: 'success',

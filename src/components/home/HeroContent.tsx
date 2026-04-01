@@ -70,6 +70,7 @@ export default function HeroContent() {
           className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/65 sm:text-lg"
         >
           Keeping your home safe, warm, and protected through Wisconsin winters
+          {/* TODO: Confirm founding year ("2005") and job count ("hundreds") with client */}
           since 2005. Trusted by hundreds of Madison-area homeowners — from
           chimney inspections to full roof replacements.
         </motion.p>

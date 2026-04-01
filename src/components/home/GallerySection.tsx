@@ -7,9 +7,25 @@ import { ArrowRight } from 'lucide-react'
 
 // ── Gallery data ──────────────────────────────────────────────────
 //
-// Placeholder images via picsum.photos (seed-based for consistency).
-// Replace src strings with real project photos when available.
-// width/height reflect the aspect ratio we want rendered; next/image
+// TODO: Replace ALL picsum.photos URLs with real project photos before launch.
+//
+// HOW TO SWAP IN REAL PHOTOS:
+//   1. Take or collect before/after photos of real Chimneys Plus jobs
+//   2. Save them to /public/images/gallery/ (e.g. chimney-rebuild-madison.jpg)
+//   3. Replace each `src` below with "/images/gallery/your-photo.jpg"
+//   4. Remove the picsum.photos entries from next.config.ts remotePatterns
+//      (no longer needed once you use local /public images)
+//   5. Update `alt` and `caption` to match the real job location
+//
+// SHOT LIST to collect from client (aim for 6-10 photos):
+//   - Chimney rebuild or tuckpointing (before AND after if possible)
+//   - Chimney crown repair or new cap installation
+//   - Roof replacement (aerial or from ladder)
+//   - Siding project (full side of house)
+//   - Fireplace insert installation
+//   - Crew working on a Madison/Dane County home (with homeowner permission)
+//
+// width/height reflect the aspect ratio you want rendered; next/image
 // uses these to reserve space and prevent layout shift.
 
 type GalleryItem = {

@@ -20,6 +20,12 @@ export default function HeroSection() {
       {/* ── Background image ──────────────────────────────────────
            fill + priority → LCP element, loaded immediately.
            Replace src with a real project photo when available.   */}
+      {/*
+        TODO: Replace this stock photo with a real Chimneys Plus project photo.
+        Ideal shot: technician on a roof or a clean Wisconsin chimney against blue sky.
+        Minimum size: 2400×1600px. Save to /public/images/hero.jpg and update src below.
+        Good free sources: your own phone camera, or https://unsplash.com (search "chimney roof Wisconsin")
+      */}
       <Image
         src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2400&q=80"
         alt="A well-maintained Wisconsin home with a clean chimney and roof"
