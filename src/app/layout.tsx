@@ -88,13 +88,22 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${inter.variable} ${montserrat.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </body>
+        {/* Skip-to-content — visible only on keyboard focus */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white focus:shadow-lg focus:outline-none"
+        >
+          Skip to main content
+        </a>
+        <Header />
+        <div id="main-content" className="flex-1">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

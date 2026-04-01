@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import Link from "next/link";
 import { Phone, ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
@@ -22,7 +22,7 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, ease: cubicBezier(0.22, 1, 0.36, 1) },
   },
 };
 
