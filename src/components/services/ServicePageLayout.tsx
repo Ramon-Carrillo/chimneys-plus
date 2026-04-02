@@ -145,7 +145,7 @@ export default function ServicePageLayout({
             <h2
               id='benefits-heading'
               className='font-heading text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl'>
-              Why Choose Chimneys Plus for{' '}
+              Why Choose Us for{' '}
               <span className='text-brand-orange'>{serviceTitle}</span>
             </h2>
           </div>
@@ -173,9 +173,9 @@ export default function ServicePageLayout({
               Problems We See &amp; How We Fix Them
             </h2>
             <p className='mt-3 max-w-2xl text-muted-foreground'>
-              Wisconsin&rsquo;s freeze-thaw cycles are hard on exterior masonry and
-              roofing. Here are the issues we encounter most often — and exactly
-              what we do about them.
+              Local weather can be hard on exterior masonry and roofing. Here
+              are the issues we encounter most often — and exactly what we do
+              about them.
             </p>
           </div>
 
@@ -219,8 +219,8 @@ export default function ServicePageLayout({
             <span className='text-brand-orange'>{serviceTitle}?</span>
           </h2>
           <p className='mt-4 text-white/60'>
-            Free estimates, no obligation. We serve Madison and all of Dane
-            County and typically respond within one business day.
+            Free estimates, no obligation. We serve {COMPANY.location.city} and all of{' '}
+            {COMPANY.location.region} and typically respond within one business day.
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-4'>
             <Link
@@ -237,8 +237,8 @@ export default function ServicePageLayout({
             </a>
           </div>
           <p className='mt-5 text-xs text-white/35'>
-            Serving Madison, Middleton, Waunakee, Sun Prairie, DeForest,
-            Poynette &amp; all of Dane County, WI
+            Serving {COMPANY.location.serviceAreas.join(' · ')} &amp; all of{' '}
+            {COMPANY.location.region}, {COMPANY.location.state}
           </p>
         </div>
       </section>

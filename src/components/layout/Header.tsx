@@ -43,7 +43,7 @@ export default function Header() {
       {/* ── Announcement bar (desktop only) ───────────────────── */}
       <div className="hidden sm:block bg-brand-navy-dark border-b border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-white/55">
-          <span>Serving Madison &amp; Dane County, WI</span>
+          <span>Serving {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}</span>
           <div className="flex items-center gap-4">
             <a
               href={COMPANY.phone.secondaryHref}
@@ -70,17 +70,17 @@ export default function Header() {
             href="/"
             onClick={closeMobile}
             className="flex items-center gap-3 shrink-0 group"
-            aria-label="Chimneys Plus — home"
+            aria-label={`${COMPANY.shortName} — home`}
           >
             <div className="flex h-9 w-9 items-center justify-center rounded-md bg-brand-orange transition-colors group-hover:bg-brand-orange-hover">
               <Flame className="h-5 w-5 text-white" strokeWidth={2.5} />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-heading text-[14px] font-bold tracking-wider text-white uppercase">
-                Chimneys Plus
+                {COMPANY.shortName}
               </span>
               <span className="text-[10px] font-medium tracking-[0.18em] text-brand-orange uppercase">
-                Roofing &amp; Exteriors
+                {COMPANY.tagline}
               </span>
             </div>
           </Link>

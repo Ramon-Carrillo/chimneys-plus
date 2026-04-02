@@ -16,23 +16,22 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Chimney Services",
   description:
-    "Complete chimney services in Madison, WI — inspections, cleanings, repairs, rebuilds, liners, crowns, and fireplace inserts. CSIA certified. Free estimates. Dane County.",
+    "Complete chimney services in [City], [State] — inspections, cleanings, repairs, rebuilds, liners, crowns, and fireplace inserts. [Certification] certified. Free estimates. [Region].",
   keywords: [
-    "chimney services Madison WI",
-    "chimney inspection Madison WI",
-    "chimney cleaning Madison Wisconsin",
-    "chimney repair Madison WI",
-    "chimney liner installation Madison",
-    "chimney crown repair Wisconsin",
-    "fireplace insert installation Madison WI",
-    "CSIA certified chimney service Wisconsin",
-    "chimney company Madison WI",
-    "chimney sweep Dane County",
+    "chimney services [City] [State]",
+    "chimney inspection [City] [State]",
+    "chimney cleaning [City] [State]",
+    "chimney repair [City] [State]",
+    "chimney liner installation [City]",
+    "chimney crown repair [State]",
+    "fireplace insert installation [City] [State]",
+    "chimney company [City] [State]",
+    "chimney sweep [Region]",
   ],
   openGraph: {
-    title: "Chimney Services — Madison, WI | Chimneys Plus",
+    title: "Chimney Services — [City], [State] | [Company Name]",
     description:
-      "Full-service chimney care in Madison & Dane County — inspections, cleanings, repairs, liners, and inserts. CSIA certified. Free estimates.",
+      "Full-service chimney care in [City] & [Region] — inspections, cleanings, repairs, liners, and inserts. [Certification] certified. Free estimates.",
     url: "/services/chimney",
     type: "website",
   },
@@ -97,15 +96,15 @@ export default function ChimneyServicesPage() {
             </nav>
 
             <span className="inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-6">
-              CSIA Certified — Madison, WI
+              [Certification] Certified — {COMPANY.location.city}, {COMPANY.location.state}
             </span>
             <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Chimney Services in{" "}
-              <span className="text-brand-orange">Madison &amp; Dane County</span>
+              <span className="text-brand-orange">{COMPANY.location.city} &amp; {COMPANY.location.region}</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-white/60">
               From the first annual inspection to a complete chimney rebuild,
-              Chimneys Plus handles every aspect of chimney care for Madison-area
+              {COMPANY.shortName} handles every aspect of chimney care for local
               homeowners — safely, honestly, and to code.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">

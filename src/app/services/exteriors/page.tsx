@@ -7,23 +7,20 @@ import ServicePageLayout, { type Benefit, type Problem } from "@/components/serv
 export const metadata: Metadata = {
   title: "Siding & Exterior Services",
   description:
-    "Siding installation and repair in Madison, WI — vinyl, fiber cement, and wood. Licensed & insured exterior contractor serving Dane County. Free estimates.",
+    "Siding installation and repair in [City], [State] — vinyl, fiber cement, and wood. Licensed & insured exterior contractor serving [Region]. Free estimates.",
   keywords: [
-    "siding contractor Madison WI",
-    "vinyl siding installation Madison Wisconsin",
-    "fiber cement siding Madison WI",
-    "siding repair Madison WI",
-    "exterior contractor Dane County",
-    "siding replacement Madison Wisconsin",
-    "James Hardie siding Madison WI",
-    "siding company Middleton WI",
-    "siding contractor Waunakee WI",
-    "exterior services Madison Wisconsin",
+    "siding contractor [City] [State]",
+    "vinyl siding installation [City] [State]",
+    "fiber cement siding [City] [State]",
+    "siding repair [City] [State]",
+    "exterior contractor [Region]",
+    "siding replacement [City] [State]",
+    "exterior services [City] [State]",
   ],
   openGraph: {
-    title: "Siding & Exterior Services — Madison, WI | Chimneys Plus",
+    title: "Siding & Exterior Services — [City], [State] | [Company Name]",
     description:
-      "Vinyl, fiber cement, and wood siding installation and repair across Madison & Dane County. Licensed & insured. Free estimates.",
+      "Vinyl, fiber cement, and wood siding installation and repair across [City] & [Region]. Licensed & insured. Free estimates.",
     url: "/services/exteriors",
     type: "website",
   },
@@ -38,12 +35,12 @@ const BENEFITS: Benefit[] = [
   {
     icon: ShieldCheck,
     title: "Licensed & Insured",
-    body: "Full Wisconsin contractor licensing and insurance coverage on every exterior project. No subcontractors — the crew that starts your job finishes it.",
+    body: "Full contractor licensing and insurance coverage on every exterior project. No subcontractors — the crew that starts your job finishes it.",
   },
   {
     icon: Layers,
     title: "Three Siding Systems",
-    body: "We install vinyl, fiber cement (James Hardie and equivalents), and wood siding. We'll help you choose the right material for your budget, aesthetic, and the thermal demands of Wisconsin winters.",
+    body: "We install vinyl, fiber cement (James Hardie and equivalents), and wood siding. We'll help you choose the right material for your budget, aesthetic, and the thermal demands of local winters.",
   },
   {
     icon: Home,
@@ -71,7 +68,7 @@ const PROBLEMS: Problem[] = [
   {
     title: "Cracked, Warped, or Rotted Siding Panels",
     description:
-      "Wisconsin's wide temperature swings cause vinyl to expand and contract significantly. Improper installation without adequate nailing slots leads to buckling. Wood siding rots when the water-resistive barrier behind it is breached. Both problems let water into the wall cavity, where it damages sheathing and framing silently.",
+      "Wide temperature swings cause vinyl to expand and contract significantly. Improper installation without adequate nailing slots leads to buckling. Wood siding rots when the water-resistive barrier behind it is breached. Both problems let water into the wall cavity, where it damages sheathing and framing silently.",
     solution:
       "We remove the affected panels, inspect the sheathing and WRB behind them, repair any moisture damage found, and install replacement panels using proper nailing and expansion clearances. If the damage is widespread, we discuss full replacement economics.",
   },
@@ -104,12 +101,12 @@ export default function ExteriorsServicesPage() {
   return (
     <ServicePageLayout
       serviceTitle="Siding & Exterior"
-      eyebrow="Exterior Contractor — Madison, WI"
-      heading="Siding & Exterior Services in Madison & Dane County, WI"
-      subheading="Vinyl, fiber cement, and wood siding installation and repair — a weatherproof barrier and a better-looking home, built to handle Wisconsin seasons."
+      eyebrow="Exterior Contractor — [City], [State]"
+      heading="Siding & Exterior Services in [City] & [Region], [State]"
+      subheading="Vinyl, fiber cement, and wood siding installation and repair — a weatherproof barrier and a better-looking home, built to handle local seasons."
       description={[
-        "New siding does two things: it improves your home's appearance immediately, and — when installed correctly — it creates a continuous weatherproof barrier that keeps water and air infiltration out for 20 to 40 years. In Madison's climate, that second job matters more than the first.",
-        "Chimneys Plus installs vinyl, fiber cement (including James Hardie products), and wood siding across Madison and Dane County. We're not a siding-only company — we understand the whole exterior envelope, which means we address the details that siding-only contractors often skip: the water-resistive barrier, the flashing at windows and doors, and the expansion gaps that keep vinyl from buckling in summer heat.",
+        "New siding does two things: it improves your home's appearance immediately, and — when installed correctly — it creates a continuous weatherproof barrier that keeps water and air infiltration out for 20 to 40 years. In our local climate, that second job matters more than the first.",
+        "We install vinyl, fiber cement (including James Hardie products), and wood siding across [City] and [Region]. We're not a siding-only company — we understand the whole exterior envelope, which means we address the details that siding-only contractors often skip: the water-resistive barrier, the flashing at windows and doors, and the expansion gaps that keep vinyl from buckling in summer heat.",
         "For existing homes with localized damage, we offer targeted repairs rather than pushing full replacement when it isn't warranted. If storm damage, rot, or impact has affected a section of your siding, we match the replacement material to your existing installation and repair only what needs it.",
         "All our exterior work is performed by our own crew — not subcontractors — and carries our standard workmanship warranty.",
       ]}

@@ -22,9 +22,9 @@ const stagger = {
 // ── Stats ─────────────────────────────────────────────────────────
 
 const STATS = [
-  { icon: CalendarDays, value: '20+', label: 'Years Serving Wisconsin' },
-  { icon: Users,        value: '1,000+', label: 'Homeowners Helped' },
-  { icon: MapPin,       value: '6',      label: 'Service Areas in Dane County' },
+  { icon: CalendarDays, value: '[XX]+', label: 'Years of Experience' },
+  { icon: Users,        value: '[X,000]+', label: 'Homeowners Helped' },
+  { icon: MapPin,       value: '[X]',   label: 'Service Areas' },
 ] as const
 
 // ─────────────────────────────────────────────────────────────────
@@ -49,36 +49,38 @@ export default function AboutSection() {
               variants={fadeUp}
               className='inline-flex items-center gap-2 rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
               <MapPin className='h-3.5 w-3.5' aria-hidden='true' />
-              Madison &amp; Dane County, WI
+              {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}
             </motion.span>
 
             <motion.h2
               id='about-heading'
               variants={fadeUp}
               className='font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl'>
-              Wisconsin-Grown Expertise,{' '}
+              Local Expertise,{' '}
               <span className='text-brand-orange'>Built on Trust</span>
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className='mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg'>
-              Chimneys Plus Roofing &amp; Exteriors has been protecting Madison-area
-              homes since 2005. We&rsquo;re a locally owned, family-run operation —
+              {/* TODO: Update with actual company history */}
+              {COMPANY.name} has been protecting local homes since [Year Founded].
+              We&rsquo;re a locally owned, family-run operation —
               not a franchise — which means every crew member lives in the same
-              community, deals with the same brutal Wisconsin winters, and takes
+              community, deals with the same brutal winters, and takes
               the same pride in the work they leave behind.
             </motion.p>
 
             <motion.p
               variants={fadeUp}
               className='mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg'>
-              From a routine chimney cleaning in Middleton to a full roof
-              replacement after a Dane County hailstorm, we show up on time,
+              {/* TODO: Update with local service area examples */}
+              From a routine chimney cleaning in [local area] to a full roof
+              replacement after a [Region] storm, we show up on time,
               explain what we&rsquo;re doing in plain language, and don&rsquo;t
-              leave until the job is right. Our CSIA-certified technicians
-              carry every license and certification required by the state of
-              Wisconsin — so you never have to wonder whether the work meets code.
+              leave until the job is right. Our certified technicians
+              carry every license and certification required by the state —
+              so you never have to wonder whether the work meets code.
             </motion.p>
 
             <motion.div variants={fadeUp} className='mt-8'>
@@ -125,7 +127,7 @@ export default function AboutSection() {
               variants={fadeUp}
               className='rounded-2xl border border-brand-orange/20 bg-brand-orange-light p-6'>
               <p className='text-sm font-semibold text-brand-orange mb-2'>
-                Serving all of Dane County
+                Serving all of {COMPANY.location.region}
               </p>
               <p className='text-sm text-muted-foreground leading-relaxed'>
                 {COMPANY.location.serviceAreas.join(' · ')}

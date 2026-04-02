@@ -12,7 +12,7 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Chimneys Plus Roofing & Exteriors — serving Madison, WI and Dane County with expert chimney and roofing services since 2005.",
+    "Learn about [Company Name] — serving [City], [State] and [Region] with expert chimney and roofing services since [Year Founded].",
 };
 
 // ── Values ────────────────────────────────────────────────────────
@@ -25,18 +25,18 @@ const VALUES = [
   },
   {
     icon: HardHat,
-    title: "CSIA-Certified",
-    body: "Our chimney professionals hold current Chimney Safety Institute of America certifications \u2014 the national standard for safe, code-compliant chimney work.",
+    title: "[Certification]-Certified",
+    body: "Our chimney professionals hold current [Certification] certifications \u2014 the national standard for safe, code-compliant chimney work.",
   },
   {
     icon: MapPin,
     title: "Locally Rooted",
-    body: "We live in the same communities we serve. That means we understand Wisconsin winters, local building codes, and what your neighbors\u2019 homes actually need.",
+    body: "We live in the same communities we serve. That means we understand local weather, building codes, and what your neighbors\u2019 homes actually need.",
   },
   {
     icon: CalendarDays,
-    title: "20+ Years of Experience",
-    body: "Since 2005 we\u2019ve built a track record of reliable work across Madison and Dane County — built on referrals, not on advertising spend.",
+    title: "[XX]+ Years of Experience",
+    body: "Since [Year Founded] we\u2019ve built a track record of reliable work across [City] and [Region] \u2014 built on referrals, not on advertising spend.",
   },
 ] as const;
 
@@ -49,16 +49,17 @@ export default function AboutPage() {
       <section className="bg-brand-navy py-20 lg:py-28" aria-label="About us hero">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/30 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-6">
-            About Chimneys Plus
+            About {COMPANY.shortName}
           </span>
           <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Wisconsin&rsquo;s Trusted{" "}
+            {COMPANY.location.state}&rsquo;s Trusted{" "}
             <span className="text-brand-orange">Chimney &amp; Roofing</span>{" "}
             Specialists
           </h1>
           <p className="mt-6 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-            Family-owned and locally operated in Madison, WI since 2005.
-            Protecting Dane County homes, one chimney at a time.
+            {/* TODO: Update with actual founding year and service area description */}
+            Family-owned and locally operated in {COMPANY.location.city}, {COMPANY.location.state} since [Year Founded].
+            Protecting {COMPANY.location.region} homes, one chimney at a time.
           </p>
         </div>
       </section>
@@ -74,8 +75,9 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
+                {/* TODO: Update with actual company founding story */}
                 <p>
-                  Chimneys Plus was founded in Madison in 2005 by a team of
+                  {COMPANY.shortName} was founded in {COMPANY.location.city} in [Year Founded] by a team of
                   tradespeople who believed homeowners deserved honest, skilled
                   chimney and roofing work without the runaround. What started
                   as a small chimney-focused crew has grown into a full-service
@@ -86,11 +88,10 @@ export default function AboutPage() {
                   We&rsquo;re not a franchise. Every truck, every tool, and every
                   technician represents our name. That personal accountability is
                   why the majority of our business still comes from referrals —
-                  neighbors recommending us to neighbors across Madison, Middleton,
-                  Waunakee, Sun Prairie, Poynette, and the rest of Dane County.
+                  neighbors recommending us to neighbors across {COMPANY.location.city} and the rest of {COMPANY.location.region}.
                 </p>
                 <p>
-                  Wisconsin winters are hard on homes. Freeze-thaw cycles crack
+                  Harsh winters are hard on homes. Freeze-thaw cycles crack
                   mortar joints. Ice dams lift shingles. Wind drives water behind
                   siding. We&rsquo;ve seen every version of that damage, and we
                   know how to fix it for good — not just well enough to get through
@@ -130,7 +131,7 @@ export default function AboutPage() {
             Where We Work
           </h2>
           <p className="mt-3 text-muted-foreground">
-            We serve Madison and all of Dane County, including:
+            We serve {COMPANY.location.city} and all of {COMPANY.location.region}, including:
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {COMPANY.location.serviceAreas.map((area) => (
@@ -138,7 +139,7 @@ export default function AboutPage() {
                 key={area}
                 className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-foreground shadow-sm">
                 <MapPin className="h-3.5 w-3.5 text-brand-orange" aria-hidden="true" />
-                {area}, WI
+                {area}, {COMPANY.location.state}
               </span>
             ))}
           </div>

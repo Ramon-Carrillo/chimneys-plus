@@ -1,38 +1,35 @@
 export const COMPANY = {
-  name: "Chimneys Plus Roofing & Exteriors",
-  shortName: "Chimneys Plus",
+  name: "[Company Name]",
+  shortName: "[Company Name]",
+  tagline: "[Company Tagline]", // e.g. "Roofing & Exteriors"
 
-  // TODO: Confirm exact founding year with client — used in Hero and About
-  founded: 2005,
+  // TODO: Replace with actual founding year
+  founded: 0,
 
   phone: {
-    main: "(608) 738-1268",
-    secondary: "(608) 733-0097",
-    mainHref: "tel:+16087381268",
-    secondaryHref: "tel:+16087330097",
+    main: "[Phone Number]",
+    secondary: "[Secondary Phone]",
+    mainHref: "tel:+10000000000",
+    secondaryHref: "tel:+10000000000",
   },
-  email: "chimneyspluswisco@gmail.com",
-  emailHref: "mailto:chimneyspluswisco@gmail.com",
+  email: "[email@example.com]",
+  emailHref: "mailto:email@example.com",
 
   location: {
-    city: "Madison",
-    state: "WI",
-    region: "Dane County",
-    // TODO: Confirm full list of service areas with client before launch
-    serviceAreas: ["Madison", "Dane County", "Poynette", "Sun Prairie", "Middleton", "Waunakee"],
-    zip: "53703", // TODO: Confirm correct zip code with client
+    city: "[City]",
+    state: "[State]",
+    region: "[Region]",
+    serviceAreas: ["[City]", "[Area 1]", "[Area 2]", "[Area 3]", "[Area 4]", "[Area 5]"],
+    zip: "[ZIP Code]",
   },
 
-  // TODO: Add real Wisconsin contractor license number before launch.
-  // Look it up at: https://dsps.wi.gov/Pages/Credentialing/CredentialSearch.aspx
-  // Display format once you have it: "Lic. #123456789"
+  // TODO: Add real contractor license number before launch.
   license: null as string | null,
 
-  // TODO: Confirm actual business hours with client before launch.
-  // These are displayed on the Contact page sidebar.
+  // TODO: Confirm actual business hours before launch.
   hours: {
-    weekdays: "Mon \u2013 Fri: 7 am \u2013 6 pm",
-    saturday: "Sat: 8 am \u2013 3 pm",
+    weekdays: "Mon \u2013 Fri: [Hours]",
+    saturday: "Sat: [Hours]",
     sunday:   "Sun: Closed",
   },
 } as const;

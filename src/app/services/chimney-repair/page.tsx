@@ -17,25 +17,21 @@ import ServicePageLayout, {
 export const metadata: Metadata = {
   title: "Chimney Repair & Rebuilds",
   description:
-    "Expert chimney repair in Madison, WI — tuckpointing, crown repair, spalling brick, and full chimney rebuilds. Licensed & insured. Free estimates. Serving all of Dane County.",
+    "Expert chimney repair in [City], [State] — tuckpointing, crown repair, spalling brick, and full chimney rebuilds. Licensed & insured. Free estimates. Serving all of [Region].",
   keywords: [
-    "chimney repair Madison WI",
-    "chimney repair Dane County",
-    "chimney rebuild Madison Wisconsin",
-    "tuckpointing Madison WI",
-    "chimney crown repair Madison",
-    "spalling brick chimney repair Wisconsin",
-    "chimney mortar repair Madison",
-    "chimney flashing repair Madison WI",
-    "chimney repair near me Madison",
-    "brick chimney repair Waunakee",
-    "chimney repair Sun Prairie WI",
-    "chimney repair Middleton WI",
+    "chimney repair [City] [State]",
+    "chimney repair [Region]",
+    "chimney rebuild [City] [State]",
+    "tuckpointing [City] [State]",
+    "chimney crown repair [City]",
+    "spalling brick chimney repair [State]",
+    "chimney mortar repair [City]",
+    "chimney flashing repair [City] [State]",
   ],
   openGraph: {
-    title: "Chimney Repair & Rebuilds — Madison, WI | Chimneys Plus",
+    title: "Chimney Repair & Rebuilds — [City], [State] | [Company Name]",
     description:
-      "Cracked crowns, spalling brick, deteriorated mortar — we fix it all. Licensed chimney repair specialists serving Madison & Dane County since 2005.",
+      "Cracked crowns, spalling brick, deteriorated mortar — we fix it all. Licensed chimney repair specialists serving [City] & [Region].",
     url: "/services/chimney-repair",
     type: "website",
   },
@@ -49,13 +45,13 @@ export const metadata: Metadata = {
 const BENEFITS: Benefit[] = [
   {
     icon: ShieldCheck,
-    title: "Licensed & Insured in Wisconsin",
+    title: "Licensed & Insured",
     body: "Every technician carries full general liability and workers' compensation coverage. You're protected the moment our truck pulls up.",
   },
   {
     icon: HardHat,
-    title: "CSIA-Certified Masonry Work",
-    body: "Our chimney professionals hold current Chimney Safety Institute of America certifications — the national benchmark for safe, code-compliant chimney repair.",
+    title: "[Certification]-Certified Masonry Work",
+    body: "Our chimney professionals hold current [Certification] certifications — the national benchmark for safe, code-compliant chimney repair.",
   },
   {
     icon: Wrench,
@@ -64,8 +60,8 @@ const BENEFITS: Benefit[] = [
   },
   {
     icon: Droplets,
-    title: "Wisconsin Winter-Tested Materials",
-    body: "We use Type S masonry mortar and elastomeric crowns rated for freeze-thaw cycling — not the cheapest material that'll crack again next spring.",
+    title: "Climate-Tested Materials",
+    body: "We use Type S masonry mortar and elastomeric crowns rated for freeze-thaw cycling — not the cheapest material that'll crack again next season.",
   },
   {
     icon: Clock,
@@ -97,7 +93,7 @@ const PROBLEMS: Problem[] = [
   {
     title: "Cracked or Missing Chimney Crown",
     description:
-      "The crown is the concrete cap that covers the top of the chimney masonry, leaving only the flue liner exposed. A cracked crown is the single most common entry point for water in Wisconsin chimneys — water pours in, runs down the liner, and soaks the firebox.",
+      "The crown is the concrete cap that covers the top of the chimney masonry, leaving only the flue liner exposed. A cracked crown is the single most common entry point for water in local chimneys — water pours in, runs down the liner, and soaks the firebox.",
     solution:
       "For minor cracks we apply a flexible elastomeric crown coat. For severely cracked or missing crowns we form and pour a new crown with a drip edge, sloped to shed water away from the liner.",
   },
@@ -113,7 +109,7 @@ const PROBLEMS: Problem[] = [
     description:
       "Flashing seals the joint between the chimney masonry and roof deck. When it corrodes, separates, or was never properly counter-flashed into the mortar joints, water runs straight down the interior chimney wall and into the attic or ceiling.",
     solution:
-      "We remove the failed flashing and install two-piece step-and-counter flashing set in mortar joints and secured with roofing sealant — the correct method that holds through Wisconsin winters.",
+      "We remove the failed flashing and install two-piece step-and-counter flashing set in mortar joints and secured with roofing sealant — the correct method that holds through harsh winters.",
   },
   {
     title: "Efflorescence — White Staining on Brick",
@@ -130,13 +126,13 @@ export default function ChimneyRepairPage() {
   return (
     <ServicePageLayout
       serviceTitle="Chimney Repair"
-      eyebrow="Chimney Repair & Rebuilds — Madison, WI"
-      heading="Chimney Repair & Rebuilds in Madison & Dane County, WI"
-      subheading="Spalling brick, cracked crowns, failed flashing, deteriorated mortar — we diagnose the root cause and fix it to last, using materials rated for Wisconsin's freeze-thaw cycles."
+      eyebrow="Chimney Repair & Rebuilds — [City], [State]"
+      heading="Chimney Repair & Rebuilds in [City] & [Region], [State]"
+      subheading="Spalling brick, cracked crowns, failed flashing, deteriorated mortar — we diagnose the root cause and fix it to last, using materials rated for harsh freeze-thaw cycles."
       description={[
-        "Wisconsin winters are brutal on chimney masonry. Every freeze-thaw cycle forces water deeper into micro-cracks, expands them, and opens new ones. By the time you notice water stains on the ceiling or a leaning chimney stack, the damage has usually been building for years.",
-        "Chimneys Plus has been repairing chimneys in Madison and across Dane County since 2005. We've seen every failure mode — from minor mortar erosion that a day of tuckpointing resolves, to multi-course structural collapses that require a full rebuild from the roofline up. We diagnose before we quote, which means you only pay for what your chimney actually needs.",
-        "All repair work uses materials specified for the Wisconsin climate: Type S masonry mortar, elastomeric crown coatings, stainless-steel flashing, and vapor-permeable water repellents. We don't use products that look good in the short run but fail in the next hard winter.",
+        "Harsh winters are brutal on chimney masonry. Every freeze-thaw cycle forces water deeper into micro-cracks, expands them, and opens new ones. By the time you notice water stains on the ceiling or a leaning chimney stack, the damage has usually been building for years.",
+        "We've been repairing chimneys in [City] and across [Region] since [Year Founded]. We've seen every failure mode — from minor mortar erosion that a day of tuckpointing resolves, to multi-course structural collapses that require a full rebuild from the roofline up. We diagnose before we quote, which means you only pay for what your chimney actually needs.",
+        "All repair work uses materials specified for the local climate: Type S masonry mortar, elastomeric crown coatings, stainless-steel flashing, and vapor-permeable water repellents. We don't use products that look good in the short run but fail in the next hard winter.",
         "Every job includes before-and-after documentation and a written workmanship warranty. If something we fixed fails, we come back and make it right.",
       ]}
       benefits={BENEFITS}

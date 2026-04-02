@@ -1,6 +1,7 @@
 'use server'
 
 import { z } from 'zod'
+import { COMPANY } from '@/lib/constants'
 
 // ── Service options (kept in sync with ContactForm dropdown) ──────
 
@@ -99,13 +100,13 @@ export async function submitContactForm(
     return {
       status: 'error',
       message:
-        'There was a problem sending your message. Please call us directly at (608)\u00a0738-1268.',
+        `There was a problem sending your message. Please call us directly at ${COMPANY.phone.main}.`,
     }
   }
 
   return {
     status: 'success',
     message:
-      "Thanks! We\u2019ll be in touch within one business day. For urgent matters, call us directly at (608)\u00a0738-1268.",
+      `Thanks! We\u2019ll be in touch within one business day. For urgent matters, call us directly at ${COMPANY.phone.main}.`,
   }
 }

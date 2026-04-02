@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative flex min-h-[92vh] items-center overflow-hidden"
-      aria-label="Welcome to Chimneys Plus"
+      aria-label="Welcome"
     >
       {/* ── Background image ──────────────────────────────────────
            fill + priority → LCP element, loaded immediately.
@@ -28,7 +28,7 @@ export default function HeroSection() {
       */}
       <Image
         src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2400&q=80"
-        alt="A well-maintained Wisconsin home with a clean chimney and roof"
+        alt="A well-maintained home with a clean chimney and roof"
         fill
         priority
         quality={85}

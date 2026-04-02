@@ -23,7 +23,7 @@ export default function Footer() {
               Ready to schedule an inspection or get a free estimate?
             </p>
             <p className="text-sm text-white/80 mt-0.5">
-              Serving Madison, WI and all of Dane County.
+              Serving {COMPANY.location.city}, {COMPANY.location.state} and all of {COMPANY.location.region}.
             </p>
           </div>
           <a
@@ -48,16 +48,16 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-heading text-[14px] font-bold tracking-wider text-white uppercase">
-                  Chimneys Plus
+                  {COMPANY.shortName}
                 </span>
                 <span className="text-[10px] font-medium tracking-[0.18em] text-brand-orange uppercase">
-                  Roofing &amp; Exteriors
+                  {COMPANY.tagline}
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-white/55 leading-relaxed mb-6 max-w-xs">
-              Serving Madison and Dane County homeowners with expert chimney,
+              Serving {COMPANY.location.city} and {COMPANY.location.region} homeowners with expert chimney,
               roofing, and exterior services since day one. Honest work,
               fair prices, guaranteed.
             </p>
@@ -164,7 +164,7 @@ export default function Footer() {
                     <MapPin className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
                   <span className="text-sm text-white/60">
-                    Madison, WI &amp; Dane County
+                    {COMPANY.location.city}, {COMPANY.location.state} &amp; {COMPANY.location.region}
                   </span>
                 </div>
               </li>
@@ -197,12 +197,10 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5">
               <Shield className="h-3.5 w-3.5 text-brand-orange/60" />
-              {/* TODO: Replace "Licensed Wisconsin Contractor" with real license number once confirmed.
-                  Format: "Lic. #123456789" — look up at dsps.wi.gov */}
-              Licensed Wisconsin Contractor
+              {/* TODO: Replace with real license number once confirmed. Format: "Lic. #123456789" */}
+              Licensed Contractor
             </span>
-            {/* TODO: Confirm correct ZIP code with client */}
-            <span>Madison, WI 53703</span>
+            <span>{COMPANY.location.city}, {COMPANY.location.state} {COMPANY.location.zip}</span>
           </div>
         </div>
       </div>

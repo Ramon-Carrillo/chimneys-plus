@@ -40,7 +40,7 @@ const SERVICES: ServiceItem[] = [
     icon: Wrench,
     title: 'Chimney Repairs & Rebuilds',
     description:
-      'Cracked crowns, spalling brick, and deteriorated mortar let water in every Wisconsin winter. We tuckpoint, patch, and — when needed — fully rebuild chimneys to restore structural integrity and stop the damage cycle.',
+      'Cracked crowns, spalling brick, and deteriorated mortar let water in every winter. We tuckpoint, patch, and — when needed — fully rebuild chimneys to restore structural integrity and stop the damage cycle.',
     href: '/services/chimney',
     tags: ['Tuckpointing', 'Crown Repair', 'Full Rebuilds'],
   },
@@ -48,7 +48,7 @@ const SERVICES: ServiceItem[] = [
     icon: Shield,
     title: 'Chimney Liners & Caps',
     description:
-      "A compromised liner exposes your home to carbon monoxide and fire. We install stainless-steel and cast-in-place liners sized to your appliance, and pour new crowns that shrug off Wisconsin's freeze-thaw cycles.",
+      "A compromised liner exposes your home to carbon monoxide and fire. We install stainless-steel and cast-in-place liners sized to your appliance, and pour new crowns that stand up to harsh freeze-thaw cycles.",
     href: '/services/chimney',
     tags: ['Stainless Steel', 'Cast-in-Place', 'Cap Installation'],
   },
@@ -64,7 +64,7 @@ const SERVICES: ServiceItem[] = [
     icon: Home,
     title: 'Roofing Services',
     description:
-      'One call covers roof replacements, leak repairs, and post-storm assessments. We use quality shingles rated for Wisconsin winters and work directly with your insurance adjuster when storm damage is involved.',
+      'One call covers roof replacements, leak repairs, and post-storm assessments. We use quality shingles rated for harsh winters and work directly with your insurance adjuster when storm damage is involved.',
     href: '/services/roofing',
     tags: ['Replacement', 'Repairs', 'Storm Damage', 'Insurance Claims'],
   },
@@ -72,7 +72,7 @@ const SERVICES: ServiceItem[] = [
     icon: Layers,
     title: 'Siding & Exterior Work',
     description:
-      'New siding is the fastest way to improve curb appeal and add a weatherproof barrier between your home and Wisconsin weather. We install and repair vinyl, fiber cement, and wood siding to match your style and budget.',
+      'New siding is the fastest way to improve curb appeal and add a weatherproof barrier between your home and the elements. We install and repair vinyl, fiber cement, and wood siding to match your style and budget.',
     href: '/services/exteriors',
     tags: ['Vinyl', 'Fiber Cement', 'Wood', 'Repairs'],
   },

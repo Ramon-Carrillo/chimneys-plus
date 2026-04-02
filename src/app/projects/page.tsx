@@ -4,7 +4,7 @@ import GallerySection from "@/components/home/GallerySection";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Browse completed chimney, roofing, and exterior projects by Chimneys Plus across Madison, WI and Dane County.",
+    "Browse completed chimney, roofing, and exterior projects by [Company Name] across [City], [State] and [Region].",
 };
 
 export default function ProjectsPage() {
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           </h1>
           <p className="mt-5 mx-auto max-w-xl text-lg leading-relaxed text-white/60">
             A selection of chimney rebuilds, roof replacements, and exterior
-            work we&rsquo;ve completed for homeowners across Madison and Dane County.
+            work we&rsquo;ve completed for homeowners in the local area.
           </p>
         </div>
       </section>

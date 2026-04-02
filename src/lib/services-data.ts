@@ -36,7 +36,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Chimney Services',
     href: '/services/chimney',
     description:
-      'Full-spectrum chimney care — from routine annual cleanings to complex full rebuilds — keeping every fireplace in Madison safe and code-compliant.',
+      'Full-spectrum chimney care — from routine annual cleanings to complex full rebuilds — keeping every fireplace safe and code-compliant.',
     services: [
       {
         slug: 'chimney-inspection',
@@ -73,14 +73,14 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Roofing',
     href: '/services/roofing',
     description:
-      'Roof replacements, leak repairs, and storm-damage assessments using quality shingles rated for Wisconsin winters.',
+      'Roof replacements, leak repairs, and storm-damage assessments using quality shingles rated for harsh local winters.',
     services: [
       {
         slug: 'roof-replacement',
         title: 'Roof Replacement',
         href: '/services/roofing',
         description:
-          'Full tear-off and re-roof with architectural shingles and proper ice-and-water shield for Wisconsin weather.',
+          'Full tear-off and re-roof with architectural shingles and proper ice-and-water shield for local weather.',
       },
       {
         slug: 'roof-repair',

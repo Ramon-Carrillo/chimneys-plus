@@ -27,12 +27,12 @@ const BENEFITS: Benefit[] = [
   {
     icon: ShieldCheck,
     title: 'Licensed & Insured',
-    body: 'Fully licensed in Wisconsin and carrying general liability plus workers\u2019 compensation. You\u2019re protected from the moment our truck pulls up.',
+    body: 'Fully licensed and carrying general liability plus workers\u2019 compensation. You\u2019re protected from the moment our truck pulls up.',
   },
   {
     icon: HardHat,
-    title: 'CSIA-Certified Technicians',
-    body: 'Our chimney professionals hold current Chimney Safety Institute of America certifications \u2014 the national benchmark for safe, code-compliant chimney work.',
+    title: '[Certification]-Certified Technicians',
+    body: 'Our chimney professionals hold current [Certification] certifications \u2014 the national benchmark for safe, code-compliant chimney work.',
   },
   {
     icon: ThumbsUp,
@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
           <h2
             id='why-heading'
             className='font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.65rem]'>
-            The Chimneys Plus{' '}
+            The{' '}
             <span className='text-brand-orange'>Difference</span>
           </h2>
 

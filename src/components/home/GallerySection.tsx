@@ -40,55 +40,55 @@ type GalleryItem = {
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 'chimney-rebuild-madison',
+    id: 'chimney-rebuild-1',
     src: 'https://picsum.photos/seed/chimney1/800/1060',
-    alt: 'Rebuilt brick chimney on a Madison, WI home',
-    caption: 'Chimney Rebuild – Madison, WI',
+    alt: 'Rebuilt brick chimney on a local home',
+    caption: 'Chimney Rebuild – [City, State]',
     category: 'Chimney',
     width: 800,
     height: 1060,
   },
   {
-    id: 'roof-replacement-sun-prairie',
+    id: 'roof-replacement-1',
     src: 'https://picsum.photos/seed/roof1/800/600',
-    alt: 'New architectural shingle roof on a Sun Prairie home',
-    caption: 'Roof Replacement – Sun Prairie, WI',
+    alt: 'New architectural shingle roof on a local home',
+    caption: 'Roof Replacement – [City, State]',
     category: 'Roofing',
     width: 800,
     height: 600,
   },
   {
-    id: 'chimney-liner-waunakee',
+    id: 'chimney-liner-1',
     src: 'https://picsum.photos/seed/liner1/800/700',
-    alt: 'Stainless steel chimney liner installation in Waunakee',
-    caption: 'Stainless Liner Install – Waunakee, WI',
+    alt: 'Stainless steel chimney liner installation',
+    caption: 'Stainless Liner Install – [City, State]',
     category: 'Chimney',
     width: 800,
     height: 700,
   },
   {
-    id: 'siding-middleton',
+    id: 'siding-1',
     src: 'https://picsum.photos/seed/siding1/800/900',
-    alt: 'New vinyl siding installation on a Middleton, WI home',
-    caption: 'Vinyl Siding Replacement – Middleton, WI',
+    alt: 'New vinyl siding installation on a local home',
+    caption: 'Vinyl Siding Replacement – [City, State]',
     category: 'Exteriors',
     width: 800,
     height: 900,
   },
   {
-    id: 'chimney-crown-poynette',
+    id: 'chimney-crown-1',
     src: 'https://picsum.photos/seed/crown1/800/640',
-    alt: 'New chimney crown pour on a Poynette home',
-    caption: 'Crown Rebuild – Poynette, WI',
+    alt: 'New chimney crown pour on a local home',
+    caption: 'Crown Rebuild – [City, State]',
     category: 'Chimney',
     width: 800,
     height: 640,
   },
   {
-    id: 'roof-repair-dane-county',
+    id: 'roof-repair-1',
     src: 'https://picsum.photos/seed/roof2/800/820',
-    alt: 'Storm damage roof repair in Dane County, WI',
-    caption: 'Storm Damage Repair – Dane County, WI',
+    alt: 'Storm damage roof repair on a local home',
+    caption: 'Storm Damage Repair – [City, State]',
     category: 'Roofing',
     width: 800,
     height: 820,
@@ -134,7 +134,7 @@ export default function GallerySection() {
 
           <p className='mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg'>
             A sample of chimney, roofing, and exterior work we&rsquo;ve completed
-            across Madison and Dane County.
+            for homeowners in the local area.
           </p>
         </motion.div>
 

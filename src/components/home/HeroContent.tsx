@@ -30,7 +30,7 @@ const fadeUp = {
 
 const TRUST_SIGNALS = [
   "Licensed & Insured",
-  "CSIA Certified",
+  "[Certification]",
   "Free Estimates",
   "Locally Owned & Operated",
 ] as const;
@@ -50,7 +50,7 @@ export default function HeroContent() {
         {/* Eyebrow */}
         <motion.div variants={fadeUp} className="mb-5">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase backdrop-blur-sm">
-            Madison &amp; Dane County, WI
+            {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}
           </span>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function HeroContent() {
         >
           Expert Chimney, Roofing{" "}
           <span className="text-brand-orange">&amp; Exterior Services</span>
-          <span className="block mt-1 text-white">in Madison &amp; Dane County, WI</span>
+          <span className="block mt-1 text-white">in {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}</span>
         </motion.h1>
 
         {/* Sub-headline */}
@@ -69,9 +69,9 @@ export default function HeroContent() {
           variants={fadeUp}
           className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/65 sm:text-lg"
         >
-          Keeping your home safe, warm, and protected through Wisconsin winters
-          {/* TODO: Confirm founding year ("2005") and job count ("hundreds") with client */}
-          since 2005. Trusted by hundreds of Madison-area homeowners — from
+          {/* TODO: Update founding year and homeowner count */}
+          Keeping your home safe, warm, and protected through harsh winters
+          since [Year Founded]. Trusted by [hundreds/thousands] of local homeowners — from
           chimney inspections to full roof replacements.
         </motion.p>
 

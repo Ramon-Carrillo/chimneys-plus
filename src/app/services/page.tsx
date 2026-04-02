@@ -9,21 +9,20 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Chimney inspections, cleanings, repairs, rebuilds, liners, roofing, and siding in Madison, WI and Dane County. Licensed & insured. Free estimates. Call (608) 738-1268.",
+    "Chimney inspections, cleanings, repairs, rebuilds, liners, roofing, and siding in [City], [State] and [Region]. Licensed & insured. Free estimates. Call [Phone Number].",
   keywords: [
-    "chimney services Madison WI",
-    "chimney and roofing contractor Madison Wisconsin",
-    "chimney inspection Madison WI",
-    "chimney repair Madison WI",
-    "roof replacement Madison WI",
-    "siding contractor Madison WI",
-    "exterior services Dane County",
-    "Chimneys Plus services",
+    "chimney services [City] [State]",
+    "chimney and roofing contractor [City] [State]",
+    "chimney inspection [City] [State]",
+    "chimney repair [City] [State]",
+    "roof replacement [City] [State]",
+    "siding contractor [City] [State]",
+    "exterior services [Region]",
   ],
   openGraph: {
-    title: "Chimney, Roofing & Exterior Services — Madison, WI | Chimneys Plus",
+    title: "Chimney, Roofing & Exterior Services — [City], [State] | [Company Name]",
     description:
-      "One crew for chimney, roofing, and siding in Madison & Dane County. Licensed & insured. Free estimates on all services.",
+      "One crew for chimney, roofing, and siding in [City] & [Region]. Licensed & insured. Free estimates on all services.",
     url: "/services",
     type: "website",
   },
@@ -59,7 +58,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <span className="inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-6">
-              Madison &amp; Dane County, WI
+              {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}
             </span>
             <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-[3rem]">
               Home Protection,{" "}
@@ -67,7 +66,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-white/60">
               One licensed, insured crew handles chimney, roofing, and exterior
-              work across Madison and Dane County — no subcontractors, no
+              work across {COMPANY.location.city} and {COMPANY.location.region} — no subcontractors, no
               runaround.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">

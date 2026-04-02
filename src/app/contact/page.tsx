@@ -6,24 +6,25 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Chimneys Plus Roofing & Exteriors in Madison, WI. Call (608) 738-1268 or send us a message for a free estimate on chimney, roofing, or exterior services.",
+    "Contact [Company Name] in [City], [State]. Call [Phone Number] or send us a message for a free estimate on chimney, roofing, or exterior services.",
 };
 
 // ── Extended service areas for the contact page ───────────────────
 
+// TODO: Replace with actual service areas
 const SERVICE_AREAS = [
-  "Madison",
-  "Middleton",
-  "Waunakee",
-  "Sun Prairie",
-  "DeForest",
-  "Poynette",
-  "Fitchburg",
-  "Verona",
-  "McFarland",
-  "Stoughton",
-  "Cambridge",
-  "Dane County (all)",
+  "[City]",
+  "[Area 1]",
+  "[Area 2]",
+  "[Area 3]",
+  "[Area 4]",
+  "[Area 5]",
+  "[Area 6]",
+  "[Area 7]",
+  "[Area 8]",
+  "[Area 9]",
+  "[Area 10]",
+  "[Region] (all)",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────────
@@ -137,7 +138,7 @@ export default function ContactPage() {
                     aria-hidden="true"
                   />
                   <p className="text-xs font-semibold text-brand-orange">
-                    Licensed &amp; Insured · CSIA Certified · Free Estimates
+                    Licensed &amp; Insured · [Certification] · Free Estimates
                   </p>
                 </div>
               </div>
@@ -154,7 +155,7 @@ export default function ContactPage() {
                   </h2>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  We serve Madison and all of Dane County, including:
+                  We serve {COMPANY.location.city} and all of {COMPANY.location.region}, including:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {SERVICE_AREAS.map((area) => (
@@ -174,10 +175,10 @@ export default function ContactPage() {
                   Replace this placeholder with a real embed from:
                   https://www.google.com/maps/embed/v1/place
                     ?key=YOUR_API_KEY
-                    &q=Madison,WI
+                    &q=[City],[State]
 
                   Or use the "Embed a map" option in Google Maps directly:
-                  1. Search "Madison, WI" on maps.google.com
+                  1. Search "[City], [State]" on maps.google.com
                   2. Share → Embed a map → Copy HTML
                   3. Paste the <iframe> below in place of this div
 
@@ -189,7 +190,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Chimneys Plus service area — Madison, WI"
+                    title="[Company Name] service area — [City], [State]"
                   />
                   ────────────────────────────────────────────────────────
                 */}
@@ -204,7 +205,7 @@ export default function ContactPage() {
                   </div>
                   <div className="text-center">
                     <p className="text-sm font-semibold text-muted-foreground">
-                      Madison, WI &amp; Dane County
+                      {COMPANY.location.city}, {COMPANY.location.state} &amp; {COMPANY.location.region}
                     </p>
                     <p className="text-xs text-muted-foreground/60">
                       Google Maps embed — coming soon

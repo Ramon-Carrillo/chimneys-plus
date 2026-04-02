@@ -8,24 +8,20 @@ import ServicePageLayout, { type Benefit, type Problem } from "@/components/serv
 export const metadata: Metadata = {
   title: "Roofing Services",
   description:
-    "Roof replacement, repair, and inspection in Madison, WI and Dane County. Licensed & insured roofing contractor. Storm damage, insurance claims, free estimates. (608) 738-1268.",
+    "Roof replacement, repair, and inspection in [City], [State] and [Region]. Licensed & insured roofing contractor. Storm damage, insurance claims, free estimates. [Phone Number].",
   keywords: [
-    "roofing contractor Madison WI",
-    "roof replacement Madison Wisconsin",
-    "roof repair Madison WI",
-    "roof inspection Madison WI",
-    "storm damage roof repair Dane County",
-    "roofing company Waunakee WI",
-    "roofing contractor Sun Prairie WI",
-    "roofing Middleton WI",
-    "insurance claim roofing Madison",
-    "shingle replacement Madison WI",
-    "roofing near me Madison Wisconsin",
+    "roofing contractor [City] [State]",
+    "roof replacement [City] [State]",
+    "roof repair [City] [State]",
+    "roof inspection [City] [State]",
+    "storm damage roof repair [Region]",
+    "insurance claim roofing [City]",
+    "shingle replacement [City] [State]",
   ],
   openGraph: {
-    title: "Roofing Services — Madison, WI | Chimneys Plus",
+    title: "Roofing Services — [City], [State] | [Company Name]",
     description:
-      "Roof replacement, repair, and storm-damage assessment in Madison & Dane County. Licensed & insured. Insurance claims welcome. Free estimates.",
+      "Roof replacement, repair, and storm-damage assessment in [City] & [Region]. Licensed & insured. Insurance claims welcome. Free estimates.",
     url: "/services/roofing",
     type: "website",
   },
@@ -40,22 +36,22 @@ const BENEFITS: Benefit[] = [
   {
     icon: ShieldCheck,
     title: "Licensed & Insured",
-    body: "Fully licensed in Wisconsin and carrying general liability plus workers' compensation. You're protected from the first nail to final cleanup.",
+    body: "Fully licensed and carrying general liability plus workers' compensation. You're protected from the first nail to final cleanup.",
   },
   {
     icon: HardHat,
-    title: "Quality Shingles for Wisconsin",
-    body: "We install architectural shingles with manufacturer ratings for wind and impact resistance — products designed for the ice, snow, and freeze-thaw conditions Madison homeowners deal with every year.",
+    title: "Quality Shingles for Local Conditions",
+    body: "We install architectural shingles with manufacturer ratings for wind and impact resistance — products designed for the ice, snow, and freeze-thaw conditions local homeowners deal with every year.",
   },
   {
     icon: Home,
     title: "Ice & Water Shield, Done Right",
-    body: "Wisconsin code requires ice-and-water shield at eaves. We extend it further than code minimum wherever your roof geometry creates risk — valleys, penetrations, and low-slope transitions.",
+    body: "Local code requires ice-and-water shield at eaves. We extend it further than code minimum wherever your roof geometry creates risk — valleys, penetrations, and low-slope transitions.",
   },
   {
     icon: ThumbsUp,
     title: "Insurance Claims Assistance",
-    body: "Storm damage? We document everything thoroughly, meet your adjuster on-site, and provide the detailed scope insurance companies need. We've helped dozens of Madison homeowners get full replacement coverage.",
+    body: "Storm damage? We document everything thoroughly, meet your adjuster on-site, and provide the detailed scope insurance companies need. We've helped dozens of local homeowners get full replacement coverage.",
   },
   {
     icon: Search,
@@ -80,7 +76,7 @@ const PROBLEMS: Problem[] = [
   {
     title: "Ice Dams — Icicles and Attic Water Damage",
     description:
-      "Ice dams form when attic heat melts snow on the upper roof, which refreezes at the cold eaves and backs water under the shingles. The water then works through the roof deck, soaking insulation and ceiling drywall. Wisconsin homes with inadequate attic insulation or ventilation are especially prone.",
+      "Ice dams form when attic heat melts snow on the upper roof, which refreezes at the cold eaves and backs water under the shingles. The water then works through the roof deck, soaking insulation and ceiling drywall. Homes with inadequate attic insulation or ventilation are especially prone.",
     solution:
       "We assess both the roofing and the underlying cause. Short-term: we remove the ice dam safely and install or extend ice-and-water shield at the eaves. Long-term: we document the attic ventilation issue and recommend the right insulation or soffit/ridge-vent correction.",
   },
@@ -106,13 +102,13 @@ export default function RoofingServicesPage() {
   return (
     <ServicePageLayout
       serviceTitle="Roofing"
-      eyebrow="Licensed Roofing Contractor — Madison, WI"
-      heading="Roofing Services in Madison & Dane County, WI"
-      subheading="Roof replacements, repairs, and storm assessments using quality materials rated for Wisconsin winters. Licensed, insured, and ready for insurance claims."
+      eyebrow="Licensed Roofing Contractor — [City], [State]"
+      heading="Roofing Services in [City] & [Region], [State]"
+      subheading="Roof replacements, repairs, and storm assessments using quality materials rated for harsh winters. Licensed, insured, and ready for insurance claims."
       description={[
-        "Your roof is your home's first line of defense against Wisconsin weather — and Wisconsin weather is not gentle. Hailstorms in summer, ice dams in winter, wind events year-round. When the roof fails, water finds its way in fast, and the damage compounds with every passing week.",
-        "Chimneys Plus handles roofing across Madison and Dane County with the same approach we bring to chimney work: diagnose honestly, use the right materials, and stand behind the work. We install architectural shingles from manufacturers with strong wind and impact ratings, extend ice-and-water shield beyond code minimum at every high-risk location, and complete most residential replacements in a single day.",
-        "For storm-damage claims, we work directly with insurance adjusters. We document the damage with photographs, provide a detailed scope of work, and meet your adjuster on-site so nothing gets missed. Many Madison homeowners have had full replacement claims approved that they weren't sure would be covered.",
+        "Your roof is your home's first line of defense against the elements — and local weather is not gentle. Hailstorms in summer, ice dams in winter, wind events year-round. When the roof fails, water finds its way in fast, and the damage compounds with every passing week.",
+        "We handle roofing across [City] and [Region] with the same approach we bring to chimney work: diagnose honestly, use the right materials, and stand behind the work. We install architectural shingles from manufacturers with strong wind and impact ratings, extend ice-and-water shield beyond code minimum at every high-risk location, and complete most residential replacements in a single day.",
+        "For storm-damage claims, we work directly with insurance adjusters. We document the damage with photographs, provide a detailed scope of work, and meet your adjuster on-site so nothing gets missed. Many local homeowners have had full replacement claims approved that they weren't sure would be covered.",
         "Not every problem is a full replacement job. If targeted repairs can safely extend your roof's life five to ten years, we'll tell you — and price it accordingly.",
       ]}
       benefits={BENEFITS}

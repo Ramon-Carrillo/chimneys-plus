@@ -107,7 +107,7 @@ export default function ContactForm() {
             name='phone'
             type='tel'
             autoComplete='tel'
-            placeholder='(608) 555-0100'
+            placeholder='(000) 000-0000'
             required
             aria-describedby={e.phone ? 'phone-error' : 'phone-hint'}
             aria-invalid={!!e.phone}
