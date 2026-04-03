@@ -17,6 +17,11 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   // TODO: Replace with your actual domain before launch
   metadataBase: new URL("https://example.com"),
