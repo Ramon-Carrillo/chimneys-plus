@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactCompiler: true,
+  // reactCompiler disabled — causes hydration mismatches with framer-motion
+  // reactCompiler: true,
   images: {
+    qualities: [75, 85],
     remotePatterns: [
       {
         protocol: "https",
