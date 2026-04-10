@@ -93,8 +93,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${montserrat.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {/* Skip-to-content — visible only on keyboard focus */}
         <a
           href="#main-content"

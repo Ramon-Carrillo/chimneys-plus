@@ -67,7 +67,7 @@ export default function HeroContent() {
         {/* Sub-headline */}
         <motion.p
           variants={fadeUp}
-          className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/65 sm:text-lg"
+          className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/75 sm:text-lg"
         >
           {/* TODO: Update founding year and homeowner count */}
           Keeping your home safe, warm, and protected through harsh winters
@@ -104,7 +104,7 @@ export default function HeroContent() {
           aria-label="Credentials and certifications"
         >
           {TRUST_SIGNALS.map((signal) => (
-            <li key={signal} className="flex items-center gap-2 text-sm text-white/60">
+            <li key={signal} className="flex items-center gap-2 text-sm text-white/70">
               <CheckCircle2
                 className="h-4 w-4 shrink-0 text-brand-orange"
                 strokeWidth={2}
@@ -126,7 +126,7 @@ export default function HeroContent() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
         aria-hidden="true"
       >
-        <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/30">
+        <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/50">
           Scroll
         </span>
         <motion.div
@@ -138,7 +138,7 @@ export default function HeroContent() {
             delay: 1.6,
           }}
         >
-          <ChevronDown className="h-5 w-5 text-white/30" strokeWidth={1.5} />
+          <ChevronDown className="h-5 w-5 text-white/50" strokeWidth={1.5} />
         </motion.div>
       </motion.div>
     </>

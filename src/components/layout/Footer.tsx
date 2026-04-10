@@ -56,7 +56,7 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm text-white/55 leading-relaxed mb-6 max-w-xs">
+            <p className="text-sm text-white/70 leading-relaxed mb-6 max-w-xs">
               Serving {COMPANY.location.city} and {COMPANY.location.region} homeowners with expert chimney,
               roofing, and exterior services since day one. Honest work,
               fair prices, guaranteed.
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/40 mb-5">
+            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/70 mb-5">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={`${link.label}-${link.href}`}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-sm text-white/60 hover:text-brand-orange transition-colors group"
+                    className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-orange transition-colors group"
                   >
                     <ChevronRight className="h-3.5 w-3.5 shrink-0 text-brand-orange/40 group-hover:text-brand-orange transition-colors" />
                     {link.label}
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Col 3: Services */}
           <div>
-            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/40 mb-5">
+            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/70 mb-5">
               Our Services
             </h3>
             <ul className="space-y-3">
@@ -99,7 +99,7 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       href={s.href}
-                      className="flex items-center gap-2 text-sm text-white/60 hover:text-brand-orange transition-colors group"
+                      className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-orange transition-colors group"
                     >
                       <ChevronRight className="h-3.5 w-3.5 shrink-0 text-brand-orange/40 group-hover:text-brand-orange transition-colors" />
                       {item}
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Col 4: Contact + Service Areas */}
           <div>
-            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/40 mb-5">
+            <h3 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/70 mb-5">
               Contact Us
             </h3>
             <ul className="space-y-4 mb-8">
@@ -125,9 +125,9 @@ export default function Footer() {
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
                     <Phone className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
-                  <span className="text-sm text-white/60 group-hover:text-white transition-colors">
+                  <span className="text-sm text-white/70 group-hover:text-white transition-colors">
                     {COMPANY.phone.main}
-                    <span className="block text-xs text-white/35">Main line</span>
+                    <span className="block text-xs text-white/55">Main line</span>
                   </span>
                 </a>
               </li>
@@ -137,10 +137,10 @@ export default function Footer() {
                   className="flex items-start gap-3 group"
                   aria-label={`Secondary phone: ${COMPANY.phone.secondary}`}
                 >
-                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/8 text-white/40 group-hover:bg-brand-orange/15 group-hover:text-brand-orange transition-colors">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/8 text-white/70 group-hover:bg-brand-orange/15 group-hover:text-brand-orange transition-colors">
                     <Phone className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
-                  <span className="text-sm text-white/60 group-hover:text-white transition-colors">
+                  <span className="text-sm text-white/70 group-hover:text-white transition-colors">
                     {COMPANY.phone.secondary}
                   </span>
                 </a>
@@ -153,7 +153,7 @@ export default function Footer() {
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
                     <Mail className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
-                  <span className="text-sm text-white/60 group-hover:text-white transition-colors break-all">
+                  <span className="text-sm text-white/70 group-hover:text-white transition-colors break-all">
                     {COMPANY.email}
                   </span>
                 </a>
@@ -163,21 +163,21 @@ export default function Footer() {
                   <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange">
                     <MapPin className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
-                  <span className="text-sm text-white/60">
+                  <span className="text-sm text-white/70">
                     {COMPANY.location.city}, {COMPANY.location.state} &amp; {COMPANY.location.region}
                   </span>
                 </div>
               </li>
             </ul>
 
-            <h4 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/35 mb-3">
+            <h4 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/55 mb-3">
               Service Areas
             </h4>
             <div className="flex flex-wrap gap-1.5">
               {COMPANY.location.serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="rounded-full border border-white/12 bg-white/6 px-2.5 py-1 text-xs text-white/50"
+                  className="rounded-full border border-white/12 bg-white/6 px-2.5 py-1 text-xs text-white/65"
                 >
                   {area}
                 </span>
@@ -189,7 +189,7 @@ export default function Footer() {
 
       {/* ── Bottom bar ───────────────────────────────────────── */}
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/35">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
           <p>
             &copy; {new Date().getFullYear()} {COMPANY.name}. All rights
             reserved.

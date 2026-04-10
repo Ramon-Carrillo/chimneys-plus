@@ -93,7 +93,7 @@ export default function WhyChooseUs() {
             <span className='text-brand-orange'>Difference</span>
           </h2>
 
-          <p className='mt-4 text-base leading-relaxed text-white/60 sm:text-lg'>
+          <p className='mt-4 text-base leading-relaxed text-white/70 sm:text-lg'>
             Every contractor says they do quality work. Here&rsquo;s what
             actually sets us apart.
           </p>
@@ -154,7 +154,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
       </h3>
 
       {/* Body */}
-      <p className='text-sm leading-relaxed text-white/55'>{benefit.body}</p>
+      <p className='text-sm leading-relaxed text-white/70'>{benefit.body}</p>
     </motion.div>
   )
 }
