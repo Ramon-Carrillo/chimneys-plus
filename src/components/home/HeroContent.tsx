@@ -2,7 +2,7 @@
 
 import { motion, cubicBezier } from "framer-motion";
 import Link from "next/link";
-import { Phone, ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle2, ChevronDown, Star } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 
 // ── Animation variants ────────────────────────────────────────────
@@ -97,10 +97,34 @@ export default function HeroContent() {
           </a>
         </motion.div>
 
+        {/* Review badge */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-8 flex items-center gap-3"
+        >
+          <div className="flex items-center gap-1" aria-label="4.9 out of 5 stars">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                key={i}
+                className="h-4 w-4 fill-brand-orange text-brand-orange"
+                strokeWidth={0}
+                aria-hidden="true"
+              />
+            ))}
+          </div>
+          {/* TODO: Replace with real review count and link to Google/BBB profile */}
+          <span className="text-sm font-semibold text-white">
+            4.9 Stars
+          </span>
+          <span className="text-sm text-white/70">
+            — [XX]+ Reviews on Google
+          </span>
+        </motion.div>
+
         {/* Trust signals */}
         <motion.ul
           variants={fadeUp}
-          className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5"
+          className="mt-4 flex flex-wrap gap-x-6 gap-y-2.5"
           aria-label="Credentials and certifications"
         >
           {TRUST_SIGNALS.map((signal) => (
