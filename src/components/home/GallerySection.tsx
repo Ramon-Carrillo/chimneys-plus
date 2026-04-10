@@ -1,99 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion, cubicBezier } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-
-// ── Gallery data ──────────────────────────────────────────────────
-//
-// TODO: Replace ALL picsum.photos URLs with real project photos before launch.
-//
-// HOW TO SWAP IN REAL PHOTOS:
-//   1. Take or collect before/after photos of real Chimneys Plus jobs
-//   2. Save them to /public/images/gallery/ (e.g. chimney-rebuild-madison.jpg)
-//   3. Replace each `src` below with "/images/gallery/your-photo.jpg"
-//   4. Remove the picsum.photos entries from next.config.ts remotePatterns
-//      (no longer needed once you use local /public images)
-//   5. Update `alt` and `caption` to match the real job location
-//
-// SHOT LIST to collect from client (aim for 6-10 photos):
-//   - Chimney rebuild or tuckpointing (before AND after if possible)
-//   - Chimney crown repair or new cap installation
-//   - Roof replacement (aerial or from ladder)
-//   - Siding project (full side of house)
-//   - Fireplace insert installation
-//   - Crew working on a Madison/Dane County home (with homeowner permission)
-//
-// width/height reflect the aspect ratio you want rendered; next/image
-// uses these to reserve space and prevent layout shift.
-
-type GalleryItem = {
-  id: string
-  src: string
-  alt: string
-  caption: string
-  category: 'Chimney' | 'Roofing' | 'Exteriors'
-  width: number
-  height: number
-}
-
-const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: 'chimney-rebuild-1',
-    src: 'https://picsum.photos/seed/chimney1/800/1060',
-    alt: 'Rebuilt brick chimney on a local home',
-    caption: 'Chimney Rebuild – [City, State]',
-    category: 'Chimney',
-    width: 800,
-    height: 1060,
-  },
-  {
-    id: 'roof-replacement-1',
-    src: 'https://picsum.photos/seed/roof1/800/600',
-    alt: 'New architectural shingle roof on a local home',
-    caption: 'Roof Replacement – [City, State]',
-    category: 'Roofing',
-    width: 800,
-    height: 600,
-  },
-  {
-    id: 'chimney-liner-1',
-    src: 'https://picsum.photos/seed/liner1/800/700',
-    alt: 'Stainless steel chimney liner installation',
-    caption: 'Stainless Liner Install – [City, State]',
-    category: 'Chimney',
-    width: 800,
-    height: 700,
-  },
-  {
-    id: 'siding-1',
-    src: 'https://picsum.photos/seed/siding1/800/900',
-    alt: 'New vinyl siding installation on a local home',
-    caption: 'Vinyl Siding Replacement – [City, State]',
-    category: 'Exteriors',
-    width: 800,
-    height: 900,
-  },
-  {
-    id: 'chimney-crown-1',
-    src: 'https://picsum.photos/seed/crown1/800/640',
-    alt: 'New chimney crown pour on a local home',
-    caption: 'Crown Rebuild – [City, State]',
-    category: 'Chimney',
-    width: 800,
-    height: 640,
-  },
-  {
-    id: 'roof-repair-1',
-    src: 'https://picsum.photos/seed/roof2/800/820',
-    alt: 'Storm damage roof repair on a local home',
-    caption: 'Storm Damage Repair – [City, State]',
-    category: 'Roofing',
-    width: 800,
-    height: 820,
-  },
-]
+import { ArrowRight, Camera } from 'lucide-react'
 
 // ── Animation variants ────────────────────────────────────────────
 
@@ -105,6 +14,20 @@ const headingVariants = {
 }
 
 // ─────────────────────────────────────────────────────────────────
+//
+// TODO: Once real project photos are available, restore the full
+// masonry gallery. See git history for the previous implementation
+// with GalleryCard components and picsum.photos placeholders.
+//
+// SHOT LIST to collect from client (aim for 6-10 photos):
+//   - Chimney rebuild or tuckpointing (before AND after if possible)
+//   - Chimney crown repair or new cap installation
+//   - Roof replacement (aerial or from ladder)
+//   - Siding project (full side of house)
+//   - Fireplace insert installation
+//   - Crew working on a local home (with homeowner permission)
+//
+// Save photos to /public/images/gallery/ and update this component.
 
 export default function GallerySection() {
   return (
@@ -133,71 +56,37 @@ export default function GallerySection() {
           </h2>
 
           <p className='mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg'>
-            A sample of chimney, roofing, and exterior work we&rsquo;ve completed
-            for homeowners in the local area.
+            We&rsquo;re building our project gallery with photos from real chimney,
+            roofing, and exterior work we&rsquo;ve completed for local homeowners.
           </p>
         </motion.div>
 
-        {/* ── Masonry grid (CSS columns) ───────────────────────── */}
-        <div className='columns-1 gap-5 sm:columns-2 lg:columns-3'>
-          {GALLERY_ITEMS.map((item, i) => (
-            <GalleryCard key={item.id} item={item} index={i} />
-          ))}
-        </div>
-
-        {/* ── Bottom CTA ───────────────────────────────────────── */}
+        {/* ── Coming-soon placeholder ─────────────────────────── */}
         <motion.div
-          className='mt-14 text-center'
-          initial={{ opacity: 0, y: 16 }}
+          className='mx-auto max-w-lg text-center rounded-2xl border-2 border-dashed border-border bg-muted/30 px-8 py-16'
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}>
+          transition={{ duration: 0.5 }}>
+          <div className='mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange-light text-brand-orange'>
+            <Camera className='h-8 w-8' strokeWidth={1.5} aria-hidden='true' />
+          </div>
+          <h3 className='font-heading text-lg font-bold text-foreground mb-2'>
+            Project Photos Coming Soon
+          </h3>
+          <p className='text-sm leading-relaxed text-muted-foreground mb-6'>
+            Want to see examples of our work in person? Get in touch and
+            we&rsquo;ll share before-and-after photos from jobs in your area.
+          </p>
           <Link
-            href='/projects'
-            className='inline-flex items-center gap-2 rounded-md border-2 border-brand-navy px-6 py-3.5 text-sm font-bold text-brand-navy transition-all duration-200 hover:bg-brand-navy hover:text-white'>
-            View All Projects
+            href='/contact'
+            className='inline-flex items-center gap-2 rounded-md bg-brand-navy px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-brand-navy-dark'>
+            Request Project Examples
             <ArrowRight className='h-4 w-4' aria-hidden='true' />
           </Link>
         </motion.div>
 
       </div>
     </section>
-  )
-}
-
-// ── GalleryCard ───────────────────────────────────────────────────
-
-function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
-  return (
-    <motion.figure
-      className='group relative mb-5 overflow-hidden rounded-2xl bg-muted [break-inside:avoid]'
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{
-        duration: 0.55,
-        delay: (index % 3) * 0.08,
-        ease: [0.22, 1, 0.36, 1],
-      }}>
-      {/* Image */}
-      <Image
-        src={item.src}
-        alt={item.alt}
-        width={item.width}
-        height={item.height}
-        className='w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]'
-        sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
-      />
-
-      {/* Caption overlay */}
-      <figcaption className='absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-black/75 via-black/40 to-transparent px-4 pb-4 pt-12 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100'>
-        <span className='text-sm font-semibold text-white leading-snug'>
-          {item.caption}
-        </span>
-        <span className='shrink-0 rounded-full bg-brand-orange px-2.5 py-0.5 text-[11px] font-bold text-white'>
-          {item.category}
-        </span>
-      </figcaption>
-    </motion.figure>
   )
 }
