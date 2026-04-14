@@ -190,7 +190,7 @@ export default function Footer() {
       {/* ── Bottom bar ───────────────────────────────────────── */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
-          <p>
+          <p suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {COMPANY.name}. All rights
             reserved.
           </p>
