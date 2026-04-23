@@ -9,20 +9,20 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Chimney inspections, cleanings, repairs, rebuilds, liners, roofing, and siding in [City], [State] and [Region]. Licensed & insured. Free estimates. Call [Phone Number].",
+    "Chimney inspections, cleanings, repairs, rebuilds, liners, roofing, and siding in Portland, OR and Pacific Northwest. Licensed & insured. Free estimates. Call (503) 555-0100.",
   keywords: [
-    "chimney services [City] [State]",
-    "chimney and roofing contractor [City] [State]",
-    "chimney inspection [City] [State]",
-    "chimney repair [City] [State]",
-    "roof replacement [City] [State]",
-    "siding contractor [City] [State]",
-    "exterior services [Region]",
+    "chimney services Portland OR",
+    "chimney and roofing contractor Portland OR",
+    "chimney inspection Portland OR",
+    "chimney repair Portland OR",
+    "roof replacement Portland OR",
+    "siding contractor Portland OR",
+    "exterior services Pacific Northwest",
   ],
   openGraph: {
-    title: "Chimney, Roofing & Exterior Services — [City], [State] | [Company Name]",
+    title: "Chimney, Roofing & Exterior Services — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "One crew for chimney, roofing, and siding in [City] & [Region]. Licensed & insured. Free estimates on all services.",
+      "One crew for chimney, roofing, and siding in Portland & Pacific Northwest. Licensed & insured. Free estimates on all services.",
     url: "/services",
     type: "website",
   },

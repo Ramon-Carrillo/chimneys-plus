@@ -12,7 +12,7 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about [Company Name] — serving [City], [State] and [Region] with expert chimney and roofing services since [Year Founded].",
+    "Learn about Cascade Hearth & Roofing — serving Portland, OR and Pacific Northwest with expert chimney and roofing services since 2015.",
 };
 
 // ── Values ────────────────────────────────────────────────────────
@@ -25,8 +25,8 @@ const VALUES = [
   },
   {
     icon: HardHat,
-    title: "[Certification]-Certified",
-    body: "Our chimney professionals hold current [Certification] certifications \u2014 the national standard for safe, code-compliant chimney work.",
+    title: "CSIA-Certified",
+    body: "Our chimney professionals hold current CSIA certifications \u2014 the national standard for safe, code-compliant chimney work.",
   },
   {
     icon: MapPin,
@@ -35,8 +35,8 @@ const VALUES = [
   },
   {
     icon: CalendarDays,
-    title: "[XX]+ Years of Experience",
-    body: "Since [Year Founded] we\u2019ve built a track record of reliable work across [City] and [Region] \u2014 built on referrals, not on advertising spend.",
+    title: "10+ Years of Experience",
+    body: "Since 2015 we\u2019ve built a track record of reliable work across Portland and Pacific Northwest \u2014 built on referrals, not on advertising spend.",
   },
 ] as const;
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
           </h1>
           <p className="mt-6 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
             {/* TODO: Update with actual founding year and service area description */}
-            Family-owned and locally operated in {COMPANY.location.city}, {COMPANY.location.state} since [Year Founded].
+            Family-owned and locally operated in {COMPANY.location.city}, {COMPANY.location.state} since 2015.
             Protecting {COMPANY.location.region} homes, one chimney at a time.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
                 {/* TODO: Update with actual company founding story */}
                 <p>
-                  {COMPANY.shortName} was founded in {COMPANY.location.city} in [Year Founded] by a team of
+                  {COMPANY.shortName} was founded in {COMPANY.location.city} in 2015 by a team of
                   tradespeople who believed homeowners deserved honest, skilled
                   chimney and roofing work without the runaround. What started
                   as a small chimney-focused crew has grown into a full-service

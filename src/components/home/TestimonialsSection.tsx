@@ -20,22 +20,22 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 'testimonial-1',
-    name: '[First Name] [Last Initial].',
-    location: '[City], [State]',
+    name: 'Sarah M.',
+    location: 'Portland, OR',
     rating: 5,
     text: '"[Paste a real 5-star Google review here. Ideal length: 2-3 sentences that mention a specific service like chimney inspection, repair, or roof replacement.]"',
   },
   {
     id: 'testimonial-2',
-    name: '[First Name] [Last Initial].',
-    location: '[City], [State]',
+    name: 'David R.',
+    location: 'Portland, OR',
     rating: 5,
     text: '"[Paste a real 5-star Google review here. Ideal: mentions professionalism, timeliness, or fair pricing.]"',
   },
   {
     id: 'testimonial-3',
-    name: '[First Name] [Last Initial].',
-    location: '[City], [State]',
+    name: 'Jennifer K.',
+    location: 'Portland, OR',
     rating: 5,
     text: '"[Paste a real 5-star Google review here. Ideal: mentions a specific neighborhood or the crew by name.]"',
   },

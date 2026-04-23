@@ -16,22 +16,22 @@ import { COMPANY } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Chimney Services",
   description:
-    "Complete chimney services in [City], [State] — inspections, cleanings, repairs, rebuilds, liners, crowns, and fireplace inserts. [Certification] certified. Free estimates. [Region].",
+    "Complete chimney services in Portland, OR — inspections, cleanings, repairs, rebuilds, liners, crowns, and fireplace inserts. CSIA certified. Free estimates. Pacific Northwest.",
   keywords: [
-    "chimney services [City] [State]",
-    "chimney inspection [City] [State]",
-    "chimney cleaning [City] [State]",
-    "chimney repair [City] [State]",
-    "chimney liner installation [City]",
-    "chimney crown repair [State]",
-    "fireplace insert installation [City] [State]",
-    "chimney company [City] [State]",
-    "chimney sweep [Region]",
+    "chimney services Portland OR",
+    "chimney inspection Portland OR",
+    "chimney cleaning Portland OR",
+    "chimney repair Portland OR",
+    "chimney liner installation Portland",
+    "chimney crown repair OR",
+    "fireplace insert installation Portland OR",
+    "chimney company Portland OR",
+    "chimney sweep Pacific Northwest",
   ],
   openGraph: {
-    title: "Chimney Services — [City], [State] | [Company Name]",
+    title: "Chimney Services — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "Full-service chimney care in [City] & [Region] — inspections, cleanings, repairs, liners, and inserts. [Certification] certified. Free estimates.",
+      "Full-service chimney care in Portland & Pacific Northwest — inspections, cleanings, repairs, liners, and inserts. CSIA certified. Free estimates.",
     url: "/services/chimney",
     type: "website",
   },
@@ -96,7 +96,7 @@ export default function ChimneyServicesPage() {
             </nav>
 
             <span className="inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-6">
-              [Certification] Certified — {COMPANY.location.city}, {COMPANY.location.state}
+              CSIA Certified — {COMPANY.location.city}, {COMPANY.location.state}
             </span>
             <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Chimney Services in{" "}

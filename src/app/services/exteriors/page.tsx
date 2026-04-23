@@ -7,20 +7,20 @@ import ServicePageLayout, { type Benefit, type Problem } from "@/components/serv
 export const metadata: Metadata = {
   title: "Siding & Exterior Services",
   description:
-    "Siding installation and repair in [City], [State] — vinyl, fiber cement, and wood. Licensed & insured exterior contractor serving [Region]. Free estimates.",
+    "Siding installation and repair in Portland, OR — vinyl, fiber cement, and wood. Licensed & insured exterior contractor serving Pacific Northwest. Free estimates.",
   keywords: [
-    "siding contractor [City] [State]",
-    "vinyl siding installation [City] [State]",
-    "fiber cement siding [City] [State]",
-    "siding repair [City] [State]",
-    "exterior contractor [Region]",
-    "siding replacement [City] [State]",
-    "exterior services [City] [State]",
+    "siding contractor Portland OR",
+    "vinyl siding installation Portland OR",
+    "fiber cement siding Portland OR",
+    "siding repair Portland OR",
+    "exterior contractor Pacific Northwest",
+    "siding replacement Portland OR",
+    "exterior services Portland OR",
   ],
   openGraph: {
-    title: "Siding & Exterior Services — [City], [State] | [Company Name]",
+    title: "Siding & Exterior Services — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "Vinyl, fiber cement, and wood siding installation and repair across [City] & [Region]. Licensed & insured. Free estimates.",
+      "Vinyl, fiber cement, and wood siding installation and repair across Portland & Pacific Northwest. Licensed & insured. Free estimates.",
     url: "/services/exteriors",
     type: "website",
   },
@@ -101,12 +101,12 @@ export default function ExteriorsServicesPage() {
   return (
     <ServicePageLayout
       serviceTitle="Siding & Exterior"
-      eyebrow="Exterior Contractor — [City], [State]"
-      heading="Siding & Exterior Services in [City] & [Region], [State]"
+      eyebrow="Exterior Contractor — Portland, OR"
+      heading="Siding & Exterior Services in Portland & Pacific Northwest, OR"
       subheading="Vinyl, fiber cement, and wood siding installation and repair — a weatherproof barrier and a better-looking home, built to handle local seasons."
       description={[
         "New siding does two things: it improves your home's appearance immediately, and — when installed correctly — it creates a continuous weatherproof barrier that keeps water and air infiltration out for 20 to 40 years. In our local climate, that second job matters more than the first.",
-        "We install vinyl, fiber cement (including James Hardie products), and wood siding across [City] and [Region]. We're not a siding-only company — we understand the whole exterior envelope, which means we address the details that siding-only contractors often skip: the water-resistive barrier, the flashing at windows and doors, and the expansion gaps that keep vinyl from buckling in summer heat.",
+        "We install vinyl, fiber cement (including James Hardie products), and wood siding across Portland and Pacific Northwest. We're not a siding-only company — we understand the whole exterior envelope, which means we address the details that siding-only contractors often skip: the water-resistive barrier, the flashing at windows and doors, and the expansion gaps that keep vinyl from buckling in summer heat.",
         "For existing homes with localized damage, we offer targeted repairs rather than pushing full replacement when it isn't warranted. If storm damage, rot, or impact has affected a section of your siding, we match the replacement material to your existing installation and repair only what needs it.",
         "All our exterior work is performed by our own crew — not subcontractors — and carries our standard workmanship warranty.",
       ]}

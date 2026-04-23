@@ -30,7 +30,7 @@ const fadeUp = {
 
 const TRUST_SIGNALS = [
   "Licensed & Insured",
-  "[Certification]",
+  "CSIA",
   "Free Estimates",
   "Locally Owned & Operated",
 ] as const;
@@ -71,7 +71,7 @@ export default function HeroContent() {
         >
           {/* TODO: Update founding year and homeowner count */}
           Keeping your home safe, warm, and protected through harsh winters
-          since [Year Founded]. Trusted by [hundreds/thousands] of local homeowners — from
+          since 2015. Trusted by hundreds of local homeowners — from
           chimney inspections to full roof replacements.
         </motion.p>
 
@@ -117,7 +117,7 @@ export default function HeroContent() {
             4.9 Stars
           </span>
           <span className="text-sm text-white/70">
-            — [XX]+ Reviews on Google
+            — 10+ Reviews on Google
           </span>
         </motion.div>
 

@@ -17,20 +17,20 @@ import ServicePageLayout, {
 export const metadata: Metadata = {
   title: "Chimney Inspections & Cleanings",
   description:
-    "NFPA 211 Level 1, 2 & 3 chimney inspections and annual cleanings in [City], [State]. [Certification]-certified technicians. Remove creosote, prevent chimney fires. Free estimates.",
+    "NFPA 211 Level 1, 2 & 3 chimney inspections and annual cleanings in Portland, OR. CSIA-certified technicians. Remove creosote, prevent chimney fires. Free estimates.",
   keywords: [
-    "chimney inspection [City] [State]",
-    "chimney cleaning [City] [State]",
-    "chimney sweep [City] [State]",
-    "chimney inspection [Region]",
-    "annual chimney cleaning [City] [State]",
-    "creosote removal [City] [State]",
-    "fireplace inspection [City] [State]",
+    "chimney inspection Portland OR",
+    "chimney cleaning Portland OR",
+    "chimney sweep Portland OR",
+    "chimney inspection Pacific Northwest",
+    "annual chimney cleaning Portland OR",
+    "creosote removal Portland OR",
+    "fireplace inspection Portland OR",
   ],
   openGraph: {
-    title: "Chimney Inspections & Cleanings — [City], [State] | [Company Name]",
+    title: "Chimney Inspections & Cleanings — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "[Certification]-certified Level 1, 2 & 3 inspections and annual chimney cleanings in [City] & [Region]. Prevent fires, catch damage early. Free estimates.",
+      "CSIA-certified Level 1, 2 & 3 inspections and annual chimney cleanings in Portland & Pacific Northwest. Prevent fires, catch damage early. Free estimates.",
     url: "/services/chimney-inspection",
     type: "website",
   },
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
 const BENEFITS: Benefit[] = [
   {
     icon: HardHat,
-    title: "[Certification]-Certified Inspectors",
-    body: "Our inspectors hold current [Certification] certifications and follow NFPA 211 inspection standards — the same protocols insurance companies and home buyers rely on.",
+    title: "CSIA-Certified Inspectors",
+    body: "Our inspectors hold current CSIA certifications and follow NFPA 211 inspection standards — the same protocols insurance companies and home buyers rely on.",
   },
   {
     icon: FileText,
@@ -118,12 +118,12 @@ export default function ChimneyInspectionPage() {
   return (
     <ServicePageLayout
       serviceTitle="Chimney Inspections & Cleanings"
-      eyebrow="NFPA 211 Certified — [City], [State]"
-      heading="Chimney Inspections & Cleanings in [City] & [Region], [State]"
-      subheading="Annual chimney sweeping and NFPA 211 Level 1, 2, and 3 inspections by [Certification]-certified technicians — the safest way to start every heating season."
+      eyebrow="NFPA 211 Certified — Portland, OR"
+      heading="Chimney Inspections & Cleanings in Portland & Pacific Northwest, OR"
+      subheading="Annual chimney sweeping and NFPA 211 Level 1, 2, and 3 inspections by CSIA-certified technicians — the safest way to start every heating season."
       description={[
         "The National Fire Protection Association recommends every chimney be inspected at least once per year — and for good reason. A clean, properly functioning flue is the difference between a cozy fire and a house fire. In areas where wood-burning fireplaces and stoves get heavy seasonal use, skipping annual service is a risk no homeowner should take.",
-        "We perform NFPA 211 Level 1, 2, and 3 chimney inspections across [City] and [Region]. Level 1 covers accessible portions with no obstructions; Level 2 — required any time you buy or sell a home, change your heating appliance, or after any event that may have damaged the chimney — adds a video scan of the full liner length; Level 3 involves removal of components to access concealed areas. We carry the right equipment for all three.",
+        "We perform NFPA 211 Level 1, 2, and 3 chimney inspections across Portland and Pacific Northwest. Level 1 covers accessible portions with no obstructions; Level 2 — required any time you buy or sell a home, change your heating appliance, or after any event that may have damaged the chimney — adds a video scan of the full liner length; Level 3 involves removal of components to access concealed areas. We carry the right equipment for all three.",
         "Our sweeping service removes creosote at all three stages of buildup, clears nesting material and debris, and leaves the firebox, smoke shelf, and smoke chamber clean. Booking annually in spring (after the heating season) or early fall (before it) keeps your chimney clean year-round and catches issues while they're small.",
         "Every inspection includes a detailed written report with photographs. If we find deficiencies, we'll explain exactly what we found, what the risk is, and what it will cost to fix — no pressure, no inflated urgency.",
       ]}

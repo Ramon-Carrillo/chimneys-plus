@@ -31,8 +31,8 @@ const BENEFITS: Benefit[] = [
   },
   {
     icon: HardHat,
-    title: '[Certification]-Certified Technicians',
-    body: 'Our chimney professionals hold current [Certification] certifications \u2014 the national benchmark for safe, code-compliant chimney work.',
+    title: 'CSIA-Certified Technicians',
+    body: 'Our chimney professionals hold current CSIA certifications \u2014 the national benchmark for safe, code-compliant chimney work.',
   },
   {
     icon: ThumbsUp,

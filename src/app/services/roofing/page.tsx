@@ -8,20 +8,20 @@ import ServicePageLayout, { type Benefit, type Problem } from "@/components/serv
 export const metadata: Metadata = {
   title: "Roofing Services",
   description:
-    "Roof replacement, repair, and inspection in [City], [State] and [Region]. Licensed & insured roofing contractor. Storm damage, insurance claims, free estimates. [Phone Number].",
+    "Roof replacement, repair, and inspection in Portland, OR and Pacific Northwest. Licensed & insured roofing contractor. Storm damage, insurance claims, free estimates. (503) 555-0100.",
   keywords: [
-    "roofing contractor [City] [State]",
-    "roof replacement [City] [State]",
-    "roof repair [City] [State]",
-    "roof inspection [City] [State]",
-    "storm damage roof repair [Region]",
-    "insurance claim roofing [City]",
-    "shingle replacement [City] [State]",
+    "roofing contractor Portland OR",
+    "roof replacement Portland OR",
+    "roof repair Portland OR",
+    "roof inspection Portland OR",
+    "storm damage roof repair Pacific Northwest",
+    "insurance claim roofing Portland",
+    "shingle replacement Portland OR",
   ],
   openGraph: {
-    title: "Roofing Services — [City], [State] | [Company Name]",
+    title: "Roofing Services — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "Roof replacement, repair, and storm-damage assessment in [City] & [Region]. Licensed & insured. Insurance claims welcome. Free estimates.",
+      "Roof replacement, repair, and storm-damage assessment in Portland & Pacific Northwest. Licensed & insured. Insurance claims welcome. Free estimates.",
     url: "/services/roofing",
     type: "website",
   },
@@ -102,12 +102,12 @@ export default function RoofingServicesPage() {
   return (
     <ServicePageLayout
       serviceTitle="Roofing"
-      eyebrow="Licensed Roofing Contractor — [City], [State]"
-      heading="Roofing Services in [City] & [Region], [State]"
+      eyebrow="Licensed Roofing Contractor — Portland, OR"
+      heading="Roofing Services in Portland & Pacific Northwest, OR"
       subheading="Roof replacements, repairs, and storm assessments using quality materials rated for harsh winters. Licensed, insured, and ready for insurance claims."
       description={[
         "Your roof is your home's first line of defense against the elements — and local weather is not gentle. Hailstorms in summer, ice dams in winter, wind events year-round. When the roof fails, water finds its way in fast, and the damage compounds with every passing week.",
-        "We handle roofing across [City] and [Region] with the same approach we bring to chimney work: diagnose honestly, use the right materials, and stand behind the work. We install architectural shingles from manufacturers with strong wind and impact ratings, extend ice-and-water shield beyond code minimum at every high-risk location, and complete most residential replacements in a single day.",
+        "We handle roofing across Portland and Pacific Northwest with the same approach we bring to chimney work: diagnose honestly, use the right materials, and stand behind the work. We install architectural shingles from manufacturers with strong wind and impact ratings, extend ice-and-water shield beyond code minimum at every high-risk location, and complete most residential replacements in a single day.",
         "For storm-damage claims, we work directly with insurance adjusters. We document the damage with photographs, provide a detailed scope of work, and meet your adjuster on-site so nothing gets missed. Many local homeowners have had full replacement claims approved that they weren't sure would be covered.",
         "Not every problem is a full replacement job. If targeted repairs can safely extend your roof's life five to ten years, we'll tell you — and price it accordingly.",
       ]}

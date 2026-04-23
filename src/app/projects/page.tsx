@@ -4,7 +4,7 @@ import GallerySection from "@/components/home/GallerySection";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Browse completed chimney, roofing, and exterior projects by [Company Name] across [City], [State] and [Region].",
+    "Browse completed chimney, roofing, and exterior projects by Cascade Hearth & Roofing across Portland, OR and Pacific Northwest.",
 };
 
 export default function ProjectsPage() {

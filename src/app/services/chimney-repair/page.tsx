@@ -17,21 +17,21 @@ import ServicePageLayout, {
 export const metadata: Metadata = {
   title: "Chimney Repair & Rebuilds",
   description:
-    "Expert chimney repair in [City], [State] — tuckpointing, crown repair, spalling brick, and full chimney rebuilds. Licensed & insured. Free estimates. Serving all of [Region].",
+    "Expert chimney repair in Portland, OR — tuckpointing, crown repair, spalling brick, and full chimney rebuilds. Licensed & insured. Free estimates. Serving all of Pacific Northwest.",
   keywords: [
-    "chimney repair [City] [State]",
-    "chimney repair [Region]",
-    "chimney rebuild [City] [State]",
-    "tuckpointing [City] [State]",
-    "chimney crown repair [City]",
-    "spalling brick chimney repair [State]",
-    "chimney mortar repair [City]",
-    "chimney flashing repair [City] [State]",
+    "chimney repair Portland OR",
+    "chimney repair Pacific Northwest",
+    "chimney rebuild Portland OR",
+    "tuckpointing Portland OR",
+    "chimney crown repair Portland",
+    "spalling brick chimney repair OR",
+    "chimney mortar repair Portland",
+    "chimney flashing repair Portland OR",
   ],
   openGraph: {
-    title: "Chimney Repair & Rebuilds — [City], [State] | [Company Name]",
+    title: "Chimney Repair & Rebuilds — Portland, OR | Cascade Hearth & Roofing",
     description:
-      "Cracked crowns, spalling brick, deteriorated mortar — we fix it all. Licensed chimney repair specialists serving [City] & [Region].",
+      "Cracked crowns, spalling brick, deteriorated mortar — we fix it all. Licensed chimney repair specialists serving Portland & Pacific Northwest.",
     url: "/services/chimney-repair",
     type: "website",
   },
@@ -50,8 +50,8 @@ const BENEFITS: Benefit[] = [
   },
   {
     icon: HardHat,
-    title: "[Certification]-Certified Masonry Work",
-    body: "Our chimney professionals hold current [Certification] certifications — the national benchmark for safe, code-compliant chimney repair.",
+    title: "CSIA-Certified Masonry Work",
+    body: "Our chimney professionals hold current CSIA certifications — the national benchmark for safe, code-compliant chimney repair.",
   },
   {
     icon: Wrench,
@@ -126,12 +126,12 @@ export default function ChimneyRepairPage() {
   return (
     <ServicePageLayout
       serviceTitle="Chimney Repair"
-      eyebrow="Chimney Repair & Rebuilds — [City], [State]"
-      heading="Chimney Repair & Rebuilds in [City] & [Region], [State]"
+      eyebrow="Chimney Repair & Rebuilds — Portland, OR"
+      heading="Chimney Repair & Rebuilds in Portland & Pacific Northwest, OR"
       subheading="Spalling brick, cracked crowns, failed flashing, deteriorated mortar — we diagnose the root cause and fix it to last, using materials rated for harsh freeze-thaw cycles."
       description={[
         "Harsh winters are brutal on chimney masonry. Every freeze-thaw cycle forces water deeper into micro-cracks, expands them, and opens new ones. By the time you notice water stains on the ceiling or a leaning chimney stack, the damage has usually been building for years.",
-        "We've been repairing chimneys in [City] and across [Region] since [Year Founded]. We've seen every failure mode — from minor mortar erosion that a day of tuckpointing resolves, to multi-course structural collapses that require a full rebuild from the roofline up. We diagnose before we quote, which means you only pay for what your chimney actually needs.",
+        "We've been repairing chimneys in Portland and across Pacific Northwest since 2015. We've seen every failure mode — from minor mortar erosion that a day of tuckpointing resolves, to multi-course structural collapses that require a full rebuild from the roofline up. We diagnose before we quote, which means you only pay for what your chimney actually needs.",
         "All repair work uses materials specified for the local climate: Type S masonry mortar, elastomeric crown coatings, stainless-steel flashing, and vapor-permeable water repellents. We don't use products that look good in the short run but fail in the next hard winter.",
         "Every job includes before-and-after documentation and a written workmanship warranty. If something we fixed fails, we come back and make it right.",
       ]}

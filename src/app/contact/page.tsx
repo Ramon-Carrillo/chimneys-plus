@@ -6,25 +6,25 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact [Company Name] in [City], [State]. Call [Phone Number] or send us a message for a free estimate on chimney, roofing, or exterior services.",
+    "Contact Cascade Hearth & Roofing in Portland, OR. Call (503) 555-0100 or send us a message for a free estimate on chimney, roofing, or exterior services.",
 };
 
 // ── Extended service areas for the contact page ───────────────────
 
 // TODO: Replace with actual service areas
 const SERVICE_AREAS = [
-  "[City]",
-  "[Area 1]",
-  "[Area 2]",
-  "[Area 3]",
-  "[Area 4]",
-  "[Area 5]",
-  "[Area 6]",
-  "[Area 7]",
-  "[Area 8]",
-  "[Area 9]",
-  "[Area 10]",
-  "[Region] (all)",
+  "Portland",
+  "Beaverton",
+  "Lake Oswego",
+  "Tigard",
+  "Hillsboro",
+  "Gresham",
+  "Milwaukie",
+  "Oregon City",
+  "West Linn",
+  "Tualatin",
+  "Vancouver, WA",
+  "Pacific Northwest (all)",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────────
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     aria-hidden="true"
                   />
                   <p className="text-xs font-semibold text-brand-orange">
-                    Licensed &amp; Insured · [Certification] · Free Estimates
+                    Licensed &amp; Insured · CCB# 123456 · Free Estimates
                   </p>
                 </div>
               </div>
@@ -175,10 +175,10 @@ export default function ContactPage() {
                   Replace this placeholder with a real embed from:
                   https://www.google.com/maps/embed/v1/place
                     ?key=YOUR_API_KEY
-                    &q=[City],[State]
+                    &q=Portland,OR
 
                   Or use the "Embed a map" option in Google Maps directly:
-                  1. Search "[City], [State]" on maps.google.com
+                  1. Search "Portland, OR" on maps.google.com
                   2. Share → Embed a map → Copy HTML
                   3. Paste the <iframe> below in place of this div
 
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="[Company Name] service area — [City], [State]"
+                    title="Cascade Hearth & Roofing service area — Portland, OR"
                   />
                   ────────────────────────────────────────────────────────
                 */}

@@ -22,7 +22,7 @@ const stagger = {
 // ── Stats ─────────────────────────────────────────────────────────
 
 const STATS = [
-  { icon: CalendarDays, value: '[XX]+', label: 'Years of Experience' },
+  { icon: CalendarDays, value: '10+', label: 'Years of Experience' },
   { icon: Users,        value: '[X,000]+', label: 'Homeowners Helped' },
   { icon: MapPin,       value: '[X]',   label: 'Service Areas' },
 ] as const
@@ -64,7 +64,7 @@ export default function AboutSection() {
               variants={fadeUp}
               className='mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg'>
               {/* TODO: Update with actual company history */}
-              {COMPANY.name} has been protecting local homes since [Year Founded].
+              {COMPANY.name} has been protecting local homes since 2015.
               We&rsquo;re a locally owned, family-run operation —
               not a franchise — which means every crew member lives in the same
               community, deals with the same brutal winters, and takes
@@ -75,8 +75,8 @@ export default function AboutSection() {
               variants={fadeUp}
               className='mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg'>
               {/* TODO: Update with local service area examples */}
-              From a routine chimney cleaning in [local area] to a full roof
-              replacement after a [Region] storm, we show up on time,
+              From a routine chimney cleaning in Beaverton to a full roof
+              replacement after a Pacific Northwest storm, we show up on time,
               explain what we&rsquo;re doing in plain language, and don&rsquo;t
               leave until the job is right. Our certified technicians
               carry every license and certification required by the state —
