@@ -29,7 +29,11 @@ export default function HeroSection() {
         alt="A well-maintained home with a clean chimney and roof"
         fill
         priority
-        quality={80}
+        // `quality` MUST be one of the values in
+        // next.config.ts → images.qualities (currently [75, 85]).
+        // Anything else returns HTTP 400 / INVALID_IMAGE_OPTIMIZE_REQUEST
+        // and the browser can't render the optimised hero.
+        quality={85}
         className="object-cover object-center"
         sizes="100vw"
       />

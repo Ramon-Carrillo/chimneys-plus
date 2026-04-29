@@ -61,9 +61,13 @@ export const metadata: Metadata = {
       "Licensed chimney and roofing specialists serving Portland, OR and all of Pacific Northwest. Inspections, cleanings, repairs, liners, inserts, roofing, and siding.",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        // Real file is a JPEG (the previous `og-image.png` was a
+        // mis-extensioned JPEG that produced a browser MIME-mismatch
+        // warning in the console). Dimensions reflect the actual
+        // file (1248x832) so meta tags and reality agree.
+        url: "/og-image.jpg",
+        width: 1248,
+        height: 832,
         alt: "Cascade Hearth & Roofing — Portland, OR",
       },
     ],
@@ -73,7 +77,7 @@ export const metadata: Metadata = {
     title: "Cascade Hearth & Roofing | Portland, OR",
     description:
       "Licensed chimney and roofing specialists serving Portland, OR and all of Pacific Northwest.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

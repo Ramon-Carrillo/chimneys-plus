@@ -22,7 +22,13 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    qualities: [75, 85],
+    // `qualities` was a whitelist of allowed `quality` prop values.
+    // It was a footgun: any <Image quality={N}> where N wasn't in the
+    // list returned HTTP 400 (INVALID_IMAGE_OPTIMIZE_REQUEST) and the
+    // browser fell back to the un-optimised origin image. Removing it
+    // lets Next use its built-in default (75) plus any explicit quality
+    // overrides. Re-add only if you genuinely need to constrain values.
+
     // Modern formats first — saves 20-40% over PNG/JPEG on every image
     // route. AVIF is the default in Next 16 but spelling it out keeps
     // the contract explicit even if defaults change.
