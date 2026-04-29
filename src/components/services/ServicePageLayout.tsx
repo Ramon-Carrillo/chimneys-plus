@@ -77,7 +77,7 @@ export default function ServicePageLayout({
             {/* Breadcrumb */}
             <nav
               aria-label='Breadcrumb'
-              className='mb-6 flex items-center gap-2 text-xs text-white/40'>
+              className='mb-6 flex items-center gap-2 text-xs text-white/75'>
               <Link href='/' className='hover:text-white/70 transition-colors'>
                 Home
               </Link>
@@ -88,7 +88,7 @@ export default function ServicePageLayout({
                 Services
               </Link>
               <span aria-hidden='true'>/</span>
-              <span className='text-white/60'>{serviceTitle}</span>
+              <span className='text-white/75'>{serviceTitle}</span>
             </nav>
 
             {/* Eyebrow */}
@@ -102,7 +102,7 @@ export default function ServicePageLayout({
             </h1>
 
             {/* Subheading */}
-            <p className='mt-5 max-w-2xl text-lg leading-relaxed text-white/60'>
+            <p className='mt-5 max-w-2xl text-lg leading-relaxed text-white/75'>
               {subheading}
             </p>
 
@@ -110,7 +110,7 @@ export default function ServicePageLayout({
             <div className='mt-9 flex flex-wrap gap-4'>
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover hover:shadow-xl hover:shadow-brand-orange/40'>
+                className='inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover hover:shadow-xl hover:shadow-brand-orange/40'>
                 Get a Free Estimate
                 <ArrowRight className='h-4 w-4' aria-hidden='true' />
               </Link>
@@ -218,14 +218,14 @@ export default function ServicePageLayout({
             Ready to Schedule Your{' '}
             <span className='text-brand-orange'>{serviceTitle}?</span>
           </h2>
-          <p className='mt-4 text-white/60'>
+          <p className='mt-4 text-white/75'>
             Free estimates, no obligation. We serve {COMPANY.location.city} and all of{' '}
             {COMPANY.location.region} and typically respond within one business day.
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-4'>
             <Link
               href='/contact'
-              className='inline-flex items-center gap-2 rounded-md bg-brand-orange px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover'>
+              className='inline-flex items-center gap-2 rounded-md bg-brand-orange px-7 py-3.5 text-sm font-bold text-brand-navy-dark shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover'>
               Request a Free Estimate
               <ArrowRight className='h-4 w-4' aria-hidden='true' />
             </Link>
@@ -253,7 +253,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
   return (
     <div className='group flex flex-col gap-4 rounded-2xl border border-border bg-white p-7 shadow-sm transition-shadow duration-300 hover:shadow-md'>
       <div
-        className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-white'
+        className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark'
         aria-hidden='true'>
         <Icon className='h-6 w-6' strokeWidth={1.75} />
       </div>

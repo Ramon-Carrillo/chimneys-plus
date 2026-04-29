@@ -103,7 +103,7 @@ export default function RootLayout({
         {/* Skip-to-content — visible only on keyboard focus */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white focus:shadow-lg focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-brand-navy-dark focus:shadow-lg focus:outline-none"
         >
           Skip to main content
         </a>

@@ -82,7 +82,7 @@ export default function HeroContent() {
         >
           <Link
             href="#contact"
-            className="group inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover hover:shadow-xl hover:shadow-brand-orange/40 active:scale-[0.97]"
+            className="group inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover hover:shadow-xl hover:shadow-brand-orange/40 active:scale-[0.97]"
           >
             Get a Free Estimate
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -148,11 +148,11 @@ export default function HeroContent() {
         style={{ animationDelay: "1400ms" }}
         aria-hidden="true"
       >
-        <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/50">
+        <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/75">
           Scroll
         </span>
         <ChevronDown
-          className="h-5 w-5 text-white/50 motion-safe:animate-hero-bob"
+          className="h-5 w-5 text-white/75 motion-safe:animate-hero-bob"
           strokeWidth={1.5}
         />
       </div>

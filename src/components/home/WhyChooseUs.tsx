@@ -112,7 +112,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
           'inline-flex h-12 w-12 items-center justify-center rounded-xl',
           'bg-brand-orange/15 text-brand-orange',
           'transition-colors duration-300',
-          'group-hover:bg-brand-orange group-hover:text-white',
+          'group-hover:bg-brand-orange group-hover:text-brand-navy-dark',
         ].join(' ')}
         aria-hidden='true'>
         <Icon className='h-6 w-6' strokeWidth={1.75} />

@@ -56,7 +56,7 @@ export default function AboutPage() {
             <span className="text-brand-orange">Chimney &amp; Roofing</span>{" "}
             Specialists
           </h1>
-          <p className="mt-6 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
+          <p className="mt-6 mx-auto max-w-2xl text-lg leading-relaxed text-white/75">
             {/* TODO: Update with actual founding year and service area description */}
             Family-owned and locally operated in {COMPANY.location.city}, {COMPANY.location.state} since 2015.
             Protecting {COMPANY.location.region} homes, one chimney at a time.
@@ -152,14 +152,14 @@ export default function AboutPage() {
           <h2 className="font-heading text-2xl font-extrabold text-white sm:text-3xl">
             Ready to Get Started?
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-white/75">
             Free estimates, no pressure. Give us a call or send a message and
             we&rsquo;ll get back to you within one business day.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-brand-orange-hover">
+              className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark transition-colors duration-200 hover:bg-brand-orange-hover">
               Get a Free Estimate
             </Link>
             <a

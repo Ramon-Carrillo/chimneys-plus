@@ -57,7 +57,7 @@ export default function GlobalError({ error, unstable_retry }: ErrorProps) {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <button
           onClick={unstable_retry}
-          className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-orange-hover"
+          className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-5 py-3 text-sm font-bold text-brand-navy-dark transition-colors hover:bg-brand-orange-hover"
         >
           <RotateCcw className="h-4 w-4" aria-hidden="true" />
           Try Again

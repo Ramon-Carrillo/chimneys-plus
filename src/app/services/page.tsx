@@ -64,7 +64,7 @@ export default function ServicesPage() {
               Home Protection,{" "}
               <span className="text-brand-orange">Top to Bottom</span>
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-white/60">
+            <p className="mt-5 text-lg leading-relaxed text-white/75">
               One licensed, insured crew handles chimney, roofing, and exterior
               work across {COMPANY.location.city} and {COMPANY.location.region} — no subcontractors, no
               runaround.
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover">
+                className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover">
                 Get a Free Estimate
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
@@ -142,14 +142,14 @@ export default function ServicesPage() {
           <h2 className="font-heading text-2xl font-extrabold text-white sm:text-3xl">
             Not Sure What You Need?
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-white/75">
             We&rsquo;ll walk you through it — at no charge. A quick phone call
             or message is all it takes to get a clear answer.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-brand-orange-hover">
+              className="inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark transition-colors hover:bg-brand-orange-hover">
               Contact Us
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -180,7 +180,7 @@ function CategoryCard({
       {/* Icon + title */}
       <div className="flex items-start gap-4 mb-5">
         <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-white"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark"
           aria-hidden="true">
           <Icon className="h-6 w-6" strokeWidth={1.75} />
         </div>

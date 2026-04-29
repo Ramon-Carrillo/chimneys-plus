@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             Real Projects,{" "}
             <span className="text-brand-orange">Real Results</span>
           </h1>
-          <p className="mt-5 mx-auto max-w-xl text-lg leading-relaxed text-white/60">
+          <p className="mt-5 mx-auto max-w-xl text-lg leading-relaxed text-white/75">
             A selection of chimney rebuilds, roof replacements, and exterior
             work we&rsquo;ve completed for homeowners in the local area.
           </p>

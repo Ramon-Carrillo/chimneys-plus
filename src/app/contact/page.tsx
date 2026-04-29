@@ -42,7 +42,7 @@ export default function ContactPage() {
             Let&rsquo;s Talk About{" "}
             <span className="text-brand-orange">Your Project</span>
           </h1>
-          <p className="mt-5 mx-auto max-w-xl text-lg leading-relaxed text-white/60">
+          <p className="mt-5 mx-auto max-w-xl text-lg leading-relaxed text-white/75">
             Send us a message or call directly. We respond within one business
             day and all estimates are free, no obligation.
           </p>

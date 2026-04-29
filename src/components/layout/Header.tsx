@@ -196,7 +196,7 @@ export default function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               href={COMPANY.phone.mainHref}
-              className="hidden sm:flex items-center gap-2 rounded-md bg-brand-orange px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-hover active:scale-95"
+              className="hidden sm:flex items-center gap-2 rounded-md bg-brand-orange px-4 py-2.5 text-sm font-semibold text-brand-navy-dark transition-colors hover:bg-brand-orange-hover active:scale-95"
               aria-label={`Call ${COMPANY.phone.main}`}
             >
               <Phone className="h-4 w-4" strokeWidth={2.5} />
@@ -207,7 +207,7 @@ export default function Header() {
             {/* Mobile-only phone icon */}
             <a
               href={COMPANY.phone.mainHref}
-              className="flex sm:hidden items-center justify-center h-9 w-9 rounded-md bg-brand-orange text-white active:scale-95 transition-transform"
+              className="flex sm:hidden items-center justify-center h-9 w-9 rounded-md bg-brand-orange text-brand-navy-dark active:scale-95 transition-transform"
               aria-label={`Call ${COMPANY.phone.main}`}
             >
               <Phone className="h-4 w-4" strokeWidth={2.5} />
@@ -313,7 +313,7 @@ export default function Header() {
             <div className="pt-3 pb-1 border-t border-white/10">
               <a
                 href={COMPANY.phone.mainHref}
-                className="flex items-center justify-center gap-2 w-full rounded-lg bg-brand-orange px-4 py-3.5 text-sm font-bold text-white hover:bg-brand-orange-hover transition-colors"
+                className="flex items-center justify-center gap-2 w-full rounded-lg bg-brand-orange px-4 py-3.5 text-sm font-bold text-brand-navy-dark hover:bg-brand-orange-hover transition-colors"
               >
                 <Phone className="h-4 w-4" strokeWidth={2.5} />
                 {COMPANY.phone.main} — Call Now

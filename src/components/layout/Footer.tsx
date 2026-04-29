@@ -125,12 +125,12 @@ export default function Footer() {
                   className="flex items-start gap-3 group"
                   aria-label={`Main phone: ${COMPANY.phone.main}`}
                 >
-                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-brand-navy-dark transition-colors">
                     <Phone className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
                   <span className="text-sm text-white/70 group-hover:text-white transition-colors">
                     {COMPANY.phone.main}
-                    <span className="block text-xs text-white/55">Main line</span>
+                    <span className="block text-xs text-white/75">Main line</span>
                   </span>
                 </a>
               </li>
@@ -153,7 +153,7 @@ export default function Footer() {
                   href={COMPANY.emailHref}
                   className="flex items-start gap-3 group"
                 >
-                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand-orange/15 text-brand-orange group-hover:bg-brand-orange group-hover:text-brand-navy-dark transition-colors">
                     <Mail className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
                   <span className="text-sm text-white/70 group-hover:text-white transition-colors break-all">
@@ -173,14 +173,14 @@ export default function Footer() {
               </li>
             </ul>
 
-            <h4 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/55 mb-3">
+            <h4 className="font-heading text-[11px] font-semibold uppercase tracking-widest text-white/75 mb-3">
               Service Areas
             </h4>
             <div className="flex flex-wrap gap-1.5">
               {COMPANY.location.serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="rounded-full border border-white/12 bg-white/6 px-2.5 py-1 text-xs text-white/65"
+                  className="rounded-full border border-white/12 bg-white/6 px-2.5 py-1 text-xs text-white/75"
                 >
                   {area}
                 </span>
@@ -192,7 +192,7 @@ export default function Footer() {
 
       {/* ── Bottom bar ───────────────────────────────────────── */}
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/75">
           <p suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {COMPANY.name}. All rights
             reserved.
