@@ -15,6 +15,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://chimneysplus.com/sitemap.xml',
+    sitemap: 'https://chimneys-plus.vercel.app/sitemap.xml',
   }
 }

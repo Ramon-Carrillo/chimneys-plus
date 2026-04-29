@@ -3,9 +3,9 @@ import type { MetadataRoute } from 'next'
 /**
  * sitemap.ts — generates /sitemap.xml at build time.
  *
- * Next.js resolves relative URLs against the metadataBase set in
- * app/layout.tsx (https://chimneysplus.com), so these paths become
- * fully-qualified URLs in the output automatically.
+ * Keep BASE in sync with SITE_URL in app/layout.tsx and the sitemap
+ * URL in app/robots.ts. When the custom domain goes live, update all
+ * three to the same value.
  *
  * Priority guide used here:
  *   1.0  — homepage
@@ -15,7 +15,7 @@ import type { MetadataRoute } from 'next'
  *   0.6  — supporting pages (projects)
  */
 
-const BASE = 'https://chimneysplus.com'
+const BASE = 'https://chimneys-plus.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

@@ -22,9 +22,13 @@ export const viewport = {
   initialScale: 1,
 };
 
+// Single source of truth for the public URL. Used by metadataBase,
+// canonical URLs in OG/Twitter, and matched by robots.ts + sitemap.ts.
+// Update this one constant when the custom domain goes live.
+const SITE_URL = "https://chimneys-plus.vercel.app";
+
 export const metadata: Metadata = {
-  // TODO: Replace with your actual domain before launch
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Cascade Hearth & Roofing | Portland, OR",
     template: "%s | Cascade Hearth & Roofing — Portland, OR",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://example.com",
+    url: SITE_URL,
     siteName: "Cascade Hearth & Roofing",
     title: "Cascade Hearth & Roofing | Portland, OR",
     description:
