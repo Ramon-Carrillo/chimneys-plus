@@ -36,8 +36,17 @@ function delayStyle(step: number): React.CSSProperties {
   return { animationDelay: `${BASE_DELAY_MS + step * STAGGER_MS}ms` };
 }
 
-const FADE_CLS =
-  "opacity-0 motion-safe:animate-hero-fade motion-reduce:opacity-100";
+// `animation-fill-mode: both` on `.animate-hero-fade` keeps the
+// element at its FROM keyframe (opacity 0) during the delay and at
+// its TO keyframe (opacity 1) after the animation completes, so we
+// don't need a baseline `opacity-0` class. The `motion-safe:` Tailwind
+// variant was previously prepended here but Tailwind v4 doesn't
+// compose that variant onto custom CSS animation classes — the
+// resulting class compiled to nothing and the hero text rendered
+// invisible. `prefers-reduced-motion: reduce` is now honoured in
+// globals.css via a plain `@media` rule that snaps elements to their
+// final visible state and disables the infinite scroll-cue.
+const FADE_CLS = "animate-hero-fade";
 
 export default function HeroContent() {
   return (
@@ -142,9 +151,12 @@ export default function HeroContent() {
 
       {/* ── Scroll indicator ────────────────────────────────────
            Fades in late and bobs forever via two stacked CSS
-           animations on the icon. */}
+           animations on the icon. Same Tailwind v4 motion-safe
+           caveat as above — variants don't compose onto custom
+           animation classes, so we use the classes directly and
+           handle reduced-motion in globals.css. */}
       <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-0 motion-safe:animate-hero-fade motion-reduce:opacity-100"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-hero-fade"
         style={{ animationDelay: "1400ms" }}
         aria-hidden="true"
       >
@@ -152,7 +164,7 @@ export default function HeroContent() {
           Scroll
         </span>
         <ChevronDown
-          className="h-5 w-5 text-white/75 motion-safe:animate-hero-bob"
+          className="h-5 w-5 text-white/75 animate-hero-bob"
           strokeWidth={1.5}
         />
       </div>
