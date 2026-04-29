@@ -5,16 +5,16 @@ import { useEffect, useRef, useState } from "react";
 /**
  * Reveal — scroll-triggered fade-up wrapper using native IntersectionObserver.
  *
- * Replaces framer-motion's `whileInView` pattern with ~1 KB of code
- * instead of 118 KB. The element renders invisible (opacity 0,
- * translated down a few px); when it enters the viewport once, a CSS
- * animation plays in. Subsequent scroll-aways and scroll-backs do
- * nothing — matches `viewport={{ once: true }}` from the framer
- * version this is replacing.
- *
- * `prefers-reduced-motion` users skip the animation entirely (the
- * `animate-reveal-fade` utility is gated behind motion-safe in the
- * generated class string). They see the final state on first paint.
+ * Tailwind v4 caveat (the same one that bit the hero): the
+ * `motion-safe:` variant doesn't compose onto custom CSS animation
+ * classes that live outside the `@theme` block. The previous version
+ * used `motion-safe:opacity-0 motion-safe:animate-reveal-fade` and
+ * the `motion-safe:animate-reveal-fade` half compiled to nothing,
+ * leaving every section below the fold stuck at `opacity: 0`. We now
+ * toggle a plain `reveal-pending` class for the initial hidden state
+ * and swap to `animate-reveal-fade` once the IntersectionObserver
+ * fires. prefers-reduced-motion is handled in globals.css with a
+ * straight @media rule.
  *
  * Usage:
  *   <Reveal>
@@ -32,7 +32,7 @@ interface RevealProps {
   as?: keyof React.JSX.IntrinsicElements;
   /** Stagger delay in ms — useful when revealing siblings in a row. */
   delay?: number;
-  /** Pass-through className merged with the animation utilities. */
+  /** Pass-through className merged with the reveal classes. */
   className?: string;
   /** rootMargin passed to IntersectionObserver. Default: -60px (fires
    *  slightly before the element fully enters the viewport). */
@@ -67,11 +67,8 @@ export function Reveal({
     return () => io.disconnect();
   }, [rootMargin, visible]);
 
-  // We assemble the className manually instead of using cn() so this
-  // component has zero non-React deps and stays under ~50 lines.
   const cls = [
-    "motion-safe:opacity-0",
-    visible && "motion-safe:animate-reveal-fade",
+    visible ? "animate-reveal-fade" : "reveal-pending",
     className,
   ]
     .filter(Boolean)

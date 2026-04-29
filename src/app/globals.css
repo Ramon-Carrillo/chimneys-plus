@@ -249,6 +249,33 @@
   to   { opacity: 1; transform: translateY(0);    }
 }
 
+/*
+ * Initial hidden state for <Reveal> children. The component swaps
+ * this class for `.animate-reveal-fade` once the IntersectionObserver
+ * fires. Plain CSS rather than Tailwind utilities so we don't depend
+ * on `motion-safe:` composing onto custom classes (it doesn't, in v4).
+ */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
 .animate-reveal-fade {
   animation: reveal-fade 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/*
+ * Reduced-motion: skip the entrance entirely. Forcing the pending
+ * state to its visible end-state is required because the component
+ * starts in `reveal-pending` and the IntersectionObserver hasn't
+ * fired yet on first paint.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-pending {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-reveal-fade {
+    animation: none;
+  }
 }
