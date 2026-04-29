@@ -91,6 +91,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link
+              prefetch={false}
             href="/"
             onClick={closeMobile}
             className="flex items-center gap-3 shrink-0 group"
@@ -144,6 +145,7 @@ export default function Header() {
                   >
                     <div className="rounded-xl bg-white shadow-2xl ring-1 ring-black/8 overflow-hidden">
                       <Link
+              prefetch={false}
                         href="/services"
                         className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-brand-navy border-b border-gray-100 hover:bg-brand-orange-light transition-colors"
                         role="menuitem"
@@ -152,6 +154,7 @@ export default function Header() {
                       </Link>
                       {SERVICES.map((s) => (
                         <Link
+              prefetch={false}
                           key={s.slug}
                           href={s.href}
                           className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-brand-orange-light hover:text-brand-navy transition-colors"
@@ -165,6 +168,7 @@ export default function Header() {
                 </div>
               ) : (
                 <Link
+              prefetch={false}
                   key={item.label}
                   href={item.href}
                   className={`relative px-4 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -267,6 +271,7 @@ export default function Header() {
                   >
                     <div className="overflow-hidden ml-3 mt-1 pl-3 border-l-2 border-brand-orange/30 space-y-0.5">
                       <Link
+              prefetch={false}
                         href="/services"
                         onClick={closeMobile}
                         className="block rounded-lg px-3 py-2 text-sm font-semibold text-white/90 hover:bg-white/10 transition-colors"
@@ -275,6 +280,7 @@ export default function Header() {
                       </Link>
                       {SERVICES.map((s) => (
                         <Link
+              prefetch={false}
                           key={s.slug}
                           href={s.href}
                           onClick={closeMobile}
@@ -288,6 +294,7 @@ export default function Header() {
                 </div>
               ) : (
                 <Link
+              prefetch={false}
                   key={item.label}
                   href={item.href}
                   onClick={closeMobile}

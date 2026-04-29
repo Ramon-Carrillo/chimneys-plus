@@ -42,7 +42,8 @@ export default function Footer() {
 
           {/* Col 1: Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
+            <Link
+              prefetch={false} href="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-brand-orange transition-colors group-hover:bg-brand-orange-hover">
                 <Flame className="h-5 w-5 text-white" strokeWidth={2.5} />
               </div>
@@ -77,6 +78,7 @@ export default function Footer() {
               {QUICK_LINKS.map((link) => (
                 <li key={`${link.label}-${link.href}`}>
                   <Link
+              prefetch={false}
                     href={link.href}
                     className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-orange transition-colors group"
                   >
@@ -98,6 +100,7 @@ export default function Footer() {
                 s.items.map((item) => (
                   <li key={item}>
                     <Link
+              prefetch={false}
                       href={s.href}
                       className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-orange transition-colors group"
                     >
