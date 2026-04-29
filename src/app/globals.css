@@ -201,3 +201,18 @@
 .animate-hero-bob {
   animation: hero-bob 1700ms ease-in-out 1600ms infinite;
 }
+
+/*
+ * Reveal — scroll-triggered fade used by <Reveal> in components/ui/.
+ * The component toggles `animate-reveal-fade` once the element enters
+ * the viewport (via IntersectionObserver), so this keyframe runs
+ * exactly once per element.
+ */
+@keyframes reveal-fade {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.animate-reveal-fade {
+  animation: reveal-fade 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}

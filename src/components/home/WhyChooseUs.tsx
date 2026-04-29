@@ -1,6 +1,3 @@
-'use client'
-
-import { motion, cubicBezier } from 'framer-motion'
 import {
   Zap,
   ShieldCheck,
@@ -9,6 +6,7 @@ import {
   Handshake,
   type LucideIcon,
 } from 'lucide-react'
+import { Reveal } from '@/components/ui/reveal'
 
 // ── Benefit data ──────────────────────────────────────────────────
 
@@ -27,43 +25,24 @@ const BENEFITS: Benefit[] = [
   {
     icon: ShieldCheck,
     title: 'Licensed & Insured',
-    body: 'Fully licensed and carrying general liability plus workers\u2019 compensation. You\u2019re protected from the moment our truck pulls up.',
+    body: 'Fully licensed and carrying general liability plus workers’ compensation. You’re protected from the moment our truck pulls up.',
   },
   {
     icon: HardHat,
     title: 'CSIA-Certified Technicians',
-    body: 'Our chimney professionals hold current CSIA certifications \u2014 the national benchmark for safe, code-compliant chimney work.',
+    body: 'Our chimney professionals hold current CSIA certifications — the national benchmark for safe, code-compliant chimney work.',
   },
   {
     icon: ThumbsUp,
     title: 'Customer Satisfaction',
-    body: 'We don\u2019t call a job done until you\u2019re satisfied. Every project ends with a walkthrough so you can see exactly what was done and ask questions.',
+    body: 'We don’t call a job done until you’re satisfied. Every project ends with a walkthrough so you can see exactly what was done and ask questions.',
   },
   {
     icon: Handshake,
     title: 'Honest, Upfront Pricing',
-    body: 'Free estimates with no hidden charges. We explain every line of the quote in plain language and won\u2019t recommend work you don\u2019t actually need.',
+    body: 'Free estimates with no hidden charges. We explain every line of the quote in plain language and won’t recommend work you don’t actually need.',
   },
 ]
-
-// ── Animation variants ────────────────────────────────────────────
-
-const ease = cubicBezier(0.22, 1, 0.36, 1)
-
-const headingVariants = {
-  hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-}
-
-const gridVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-}
 
 // ─────────────────────────────────────────────────────────────────
 
@@ -76,12 +55,7 @@ export default function WhyChooseUs() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 
         {/* ── Section header ──────────────────────────────────── */}
-        <motion.div
-          className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-60px' }}
-          variants={headingVariants}>
+        <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
           <span className='inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
             Why Choose Us
           </span>
@@ -97,19 +71,16 @@ export default function WhyChooseUs() {
             Every contractor says they do quality work. Here&rsquo;s what
             actually sets us apart.
           </p>
-        </motion.div>
+        </Reveal>
 
         {/* ── Benefit cards ────────────────────────────────────── */}
-        <motion.div
-          className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'
-          variants={gridVariants}
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-80px' }}>
-          {BENEFITS.map((benefit) => (
-            <BenefitCard key={benefit.title} benefit={benefit} />
+        <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+          {BENEFITS.map((benefit, i) => (
+            <Reveal key={benefit.title} delay={i * 90}>
+              <BenefitCard benefit={benefit} />
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>
@@ -122,10 +93,9 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
   const Icon = benefit.icon
 
   return (
-    <motion.div
-      variants={cardVariants}
+    <div
       className={[
-        'group relative flex flex-col gap-4 rounded-2xl p-7',
+        'group relative flex h-full flex-col gap-4 rounded-2xl p-7',
         'border border-white/10 bg-white/5',
         'transition-all duration-300',
         'hover:border-brand-orange/40 hover:bg-white/10',
@@ -155,6 +125,6 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
 
       {/* Body */}
       <p className='text-sm leading-relaxed text-white/70'>{benefit.body}</p>
-    </motion.div>
+    </div>
   )
 }

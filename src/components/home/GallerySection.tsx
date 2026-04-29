@@ -1,17 +1,6 @@
-'use client'
-
 import Link from 'next/link'
-import { motion, cubicBezier } from 'framer-motion'
 import { ArrowRight, Camera } from 'lucide-react'
-
-// ── Animation variants ────────────────────────────────────────────
-
-const ease = cubicBezier(0.22, 1, 0.36, 1)
-
-const headingVariants = {
-  hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-}
+import { Reveal } from '@/components/ui/reveal'
 
 // ─────────────────────────────────────────────────────────────────
 //
@@ -38,12 +27,7 @@ export default function GallerySection() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 
         {/* ── Section header ──────────────────────────────────── */}
-        <motion.div
-          className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-60px' }}
-          variants={headingVariants}>
+        <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
           <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
             Our Work
           </span>
@@ -59,15 +43,12 @@ export default function GallerySection() {
             We&rsquo;re building our project gallery with photos from real chimney,
             roofing, and exterior work we&rsquo;ve completed for local homeowners.
           </p>
-        </motion.div>
+        </Reveal>
 
         {/* ── Coming-soon placeholder ─────────────────────────── */}
-        <motion.div
-          className='mx-auto max-w-lg text-center rounded-2xl border-2 border-dashed border-border bg-muted/30 px-8 py-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}>
+        <Reveal
+          delay={150}
+          className='mx-auto max-w-lg text-center rounded-2xl border-2 border-dashed border-border bg-muted/30 px-8 py-16'>
           <div className='mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange-light text-brand-orange'>
             <Camera className='h-8 w-8' strokeWidth={1.5} aria-hidden='true' />
           </div>
@@ -84,7 +65,7 @@ export default function GallerySection() {
             Request Project Examples
             <ArrowRight className='h-4 w-4' aria-hidden='true' />
           </Link>
-        </motion.div>
+        </Reveal>
 
       </div>
     </section>

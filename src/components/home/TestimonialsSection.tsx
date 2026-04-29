@@ -1,7 +1,5 @@
-'use client'
-
-import { motion, cubicBezier } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
+import { Reveal } from '@/components/ui/reveal'
 
 // ── Testimonial data ─────────────────────────────────────────────
 //
@@ -41,25 +39,6 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ]
 
-// ── Animation variants ────────────────────────────────────────────
-
-const ease = cubicBezier(0.22, 1, 0.36, 1)
-
-const headingVariants = {
-  hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-}
-
-const gridVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-}
-
 // ─────────────────────────────────────────────────────────────────
 
 export default function TestimonialsSection() {
@@ -71,12 +50,7 @@ export default function TestimonialsSection() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 
         {/* ── Section header ──────────────────────────────────── */}
-        <motion.div
-          className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-60px' }}
-          variants={headingVariants}>
+        <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
           <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
             Testimonials
           </span>
@@ -92,19 +66,16 @@ export default function TestimonialsSection() {
             Don&rsquo;t just take our word for it &mdash; hear from homeowners
             who&rsquo;ve trusted us with their chimney, roof, and exterior projects.
           </p>
-        </motion.div>
+        </Reveal>
 
         {/* ── Testimonial cards ────────────────────────────────── */}
-        <motion.div
-          className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
-          variants={gridVariants}
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-80px' }}>
-          {TESTIMONIALS.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          {TESTIMONIALS.map((testimonial, i) => (
+            <Reveal key={testimonial.id} delay={i * 100}>
+              <TestimonialCard testimonial={testimonial} />
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>
@@ -115,9 +86,7 @@ export default function TestimonialsSection() {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <motion.blockquote
-      variants={cardVariants}
-      className='relative flex flex-col rounded-2xl border border-border bg-white p-7 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+    <blockquote className='relative flex h-full flex-col rounded-2xl border border-border bg-white p-7 shadow-sm transition-shadow duration-300 hover:shadow-md'>
 
       {/* Quote icon */}
       <Quote
@@ -152,6 +121,6 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           {testimonial.location}
         </p>
       </footer>
-    </motion.blockquote>
+    </blockquote>
   )
 }

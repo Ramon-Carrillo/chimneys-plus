@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { motion, cubicBezier } from 'framer-motion'
 import {
   Search,
   Wrench,
@@ -12,6 +9,7 @@ import {
   ArrowRight,
   type LucideIcon,
 } from 'lucide-react'
+import { Reveal } from '@/components/ui/reveal'
 
 // ── Service card data ─────────────────────────────────────────────
 //
@@ -78,33 +76,6 @@ const SERVICES: ServiceItem[] = [
   },
 ]
 
-// ── Animation variants ────────────────────────────────────────────
-
-const headingVariants = {
-  hidden: { opacity: 0, y: 22 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
-  },
-}
-
-const gridVariants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.09, delayChildren: 0.05 },
-  },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: cubicBezier(0.22, 1, 0.36, 1) },
-  },
-}
-
 // ─────────────────────────────────────────────────────────────────
 
 export default function ServicesSection() {
@@ -115,12 +86,7 @@ export default function ServicesSection() {
       aria-labelledby='services-heading'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* ── Section header ──────────────────────────────────── */}
-        <motion.div
-          className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-60px' }}
-          variants={headingVariants}>
+        <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
           <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
             What We Do
           </span>
@@ -136,27 +102,20 @@ export default function ServicesSection() {
             Chimney crown to roof ridge to siding panels — one trusted local
             crew handles every part of your home&rsquo;s exterior.
           </p>
-        </motion.div>
+        </Reveal>
 
-        {/* ── Service card grid ────────────────────────────────── */}
-        <motion.div
-          className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
-          variants={gridVariants}
-          initial='hidden'
-          whileInView='show'
-          viewport={{ once: true, margin: '-80px' }}>
-          {SERVICES.map((service) => (
-            <ServiceCard key={service.title} service={service} />
+        {/* ── Service card grid — each card reveals with a small
+             stagger via per-index animation-delay ──────────────── */}
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          {SERVICES.map((service, i) => (
+            <Reveal key={service.title} delay={i * 90} as='article' className='contents-fix'>
+              <ServiceCard service={service} />
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
 
         {/* ── Bottom nudge ─────────────────────────────────────── */}
-        <motion.div
-          className='mt-14 text-center'
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, delay: 0.15 }}>
+        <Reveal className='mt-14 text-center'>
           <p className='mb-4 text-sm text-muted-foreground'>
             Not sure what you need? We&rsquo;ll walk you through it — at no
             charge.
@@ -167,7 +126,7 @@ export default function ServicesSection() {
             Schedule a Free Assessment
             <ArrowRight className='h-4 w-4' />
           </Link>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   )
@@ -179,10 +138,9 @@ function ServiceCard({ service }: { service: ServiceItem }) {
   const Icon = service.icon
 
   return (
-    <motion.article
-      variants={cardVariants}
+    <article
       className={[
-        'group relative flex flex-col rounded-2xl border border-border bg-white p-7',
+        'group relative flex h-full flex-col rounded-2xl border border-border bg-white p-7',
         'shadow-sm',
         /* hover: lift + orange border + amplified shadow */
         'transition-all duration-300',
@@ -240,6 +198,6 @@ function ServiceCard({ service }: { service: ServiceItem }) {
           aria-hidden='true'
         />
       </Link>
-    </motion.article>
+    </article>
   )
 }

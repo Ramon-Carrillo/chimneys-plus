@@ -11,9 +11,12 @@ const nextConfig: NextConfig = {
   // the symbols you actually use travel down the wire. On this site
   // that's the difference between ~1 MB of unused JS and a few KB.
   experimental: {
+    // framer-motion is no longer a dependency — its on-scroll animations
+    // were replaced with a tiny IntersectionObserver wrapper
+    // (components/ui/reveal.tsx) plus CSS keyframes. The few remaining
+    // heavy package imports still benefit from per-file tree-shaking.
     optimizePackageImports: [
       "lucide-react",
-      "framer-motion",
       "radix-ui",
     ],
   },
