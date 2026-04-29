@@ -28,7 +28,7 @@ export default function GallerySection() {
 
         {/* ── Section header ──────────────────────────────────── */}
         <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
-          <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
+          <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-accent-foreground uppercase mb-5'>
             Our Work
           </span>
 
@@ -49,7 +49,7 @@ export default function GallerySection() {
         <Reveal
           delay={150}
           className='mx-auto max-w-lg text-center rounded-2xl border-2 border-dashed border-border bg-muted/30 px-8 py-16'>
-          <div className='mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange-light text-brand-orange'>
+          <div className='mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange-light text-accent-foreground'>
             <Camera className='h-8 w-8' strokeWidth={1.5} aria-hidden='true' />
           </div>
           <h3 className='font-heading text-lg font-bold text-foreground mb-2'>

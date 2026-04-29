@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-1.5 text-sm text-muted-foreground">
                   All fields marked{" "}
-                  <span className="text-brand-orange font-semibold" aria-hidden="true">*</span>{" "}
+                  <span className="text-accent-foreground font-semibold" aria-hidden="true">*</span>{" "}
                   are required.
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   {/* Hours */}
                   <li className="flex items-start gap-3.5">
                     <span
-                      className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange"
+                      className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground"
                       aria-hidden="true">
                       <Clock className="h-4.5 w-4.5" strokeWidth={1.75} />
                     </span>
@@ -134,10 +134,10 @@ export default function ContactPage() {
                 {/* Trust badge */}
                 <div className="mt-6 flex items-center gap-2 rounded-lg border border-brand-orange/20 bg-brand-orange-light px-4 py-3">
                   <Shield
-                    className="h-4 w-4 shrink-0 text-brand-orange"
+                    className="h-4 w-4 shrink-0 text-accent-foreground"
                     aria-hidden="true"
                   />
-                  <p className="text-xs font-semibold text-brand-orange">
+                  <p className="text-xs font-semibold text-accent-foreground">
                     Licensed &amp; Insured · CCB# 123456 · Free Estimates
                   </p>
                 </div>
@@ -235,7 +235,7 @@ function ContactDetail({ icon: Icon, label, href, children }: ContactDetailProps
   return (
     <li className="flex items-start gap-3.5">
       <span
-        className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange"
+        className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground"
         aria-hidden="true">
         <Icon className="h-4 w-4" strokeWidth={1.75} />
       </span>

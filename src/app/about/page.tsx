@@ -107,7 +107,7 @@ export default function AboutPage() {
                   key={title}
                   className="flex flex-col gap-4 rounded-2xl border border-border bg-muted/40 p-6">
                   <div
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground"
                     aria-hidden="true">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>

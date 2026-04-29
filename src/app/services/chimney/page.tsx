@@ -145,7 +145,7 @@ export default function ChimneyServicesPage() {
                   className="group flex flex-col rounded-2xl border border-border bg-white p-7 shadow-sm transition-shadow hover:shadow-md">
                   <div className="flex items-center gap-4 mb-4">
                     <div
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors group-hover:bg-brand-orange group-hover:text-brand-navy-dark"
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground transition-colors group-hover:bg-brand-orange group-hover:text-brand-navy-dark"
                       aria-hidden="true">
                       <Icon className="h-6 w-6" strokeWidth={1.75} />
                     </div>

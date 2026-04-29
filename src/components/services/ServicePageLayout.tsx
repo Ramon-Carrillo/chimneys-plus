@@ -164,7 +164,7 @@ export default function ServicePageLayout({
         aria-labelledby='problems-heading'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
           <div className='mb-12'>
-            <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-4'>
+            <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-accent-foreground uppercase mb-4'>
               Common Issues
             </span>
             <h2
@@ -253,7 +253,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
   return (
     <div className='group flex flex-col gap-4 rounded-2xl border border-border bg-white p-7 shadow-sm transition-shadow duration-300 hover:shadow-md'>
       <div
-        className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark'
+        className='inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark'
         aria-hidden='true'>
         <Icon className='h-6 w-6' strokeWidth={1.75} />
       </div>

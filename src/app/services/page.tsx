@@ -180,7 +180,7 @@ function CategoryCard({
       {/* Icon + title */}
       <div className="flex items-start gap-4 mb-5">
         <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground transition-colors duration-300 group-hover:bg-brand-orange group-hover:text-brand-navy-dark"
           aria-hidden="true">
           <Icon className="h-6 w-6" strokeWidth={1.75} />
         </div>

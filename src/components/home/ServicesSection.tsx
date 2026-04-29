@@ -87,7 +87,7 @@ export default function ServicesSection() {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* ── Section header ──────────────────────────────────── */}
         <Reveal className='mx-auto max-w-2xl text-center mb-14 lg:mb-16'>
-          <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
+          <span className='inline-flex items-center rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-accent-foreground uppercase mb-5'>
             What We Do
           </span>
 
@@ -158,7 +158,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
       <div
         className={[
           'mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl',
-          'bg-brand-orange-light text-brand-orange',
+          'bg-brand-orange-light text-accent-foreground',
           'transition-colors duration-300',
           'group-hover:bg-brand-orange group-hover:text-brand-navy-dark',
         ].join(' ')}

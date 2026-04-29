@@ -27,7 +27,7 @@ export default function AboutSection() {
               the framer-motion stagger machinery ─────────────────── */}
           <div>
             <Reveal>
-              <span className='inline-flex items-center gap-2 rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase mb-5'>
+              <span className='inline-flex items-center gap-2 rounded-full border border-brand-orange/25 bg-brand-orange-light px-4 py-1.5 text-xs font-bold tracking-widest text-accent-foreground uppercase mb-5'>
                 <MapPin className='h-3.5 w-3.5' aria-hidden='true' />
                 {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}
               </span>
@@ -82,7 +82,7 @@ export default function AboutSection() {
                   'shadow-sm transition-shadow duration-300 hover:shadow-md',
                 ].join(' ')}>
                 <div
-                  className='flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-brand-orange'
+                  className='flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-orange-light text-accent-foreground'
                   aria-hidden='true'>
                   <Icon className='h-7 w-7' strokeWidth={1.75} />
                 </div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
             <Reveal
               delay={300}
               className='rounded-2xl border border-brand-orange/20 bg-brand-orange-light p-6'>
-              <p className='text-sm font-semibold text-brand-orange mb-2'>
+              <p className='text-sm font-semibold text-accent-foreground mb-2'>
                 Serving all of {COMPANY.location.region}
               </p>
               <p className='text-sm text-muted-foreground leading-relaxed'>

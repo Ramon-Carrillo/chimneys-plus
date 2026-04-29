@@ -138,27 +138,30 @@ export default function Header() {
                   {/* Dropdown panel — opens on group hover or
                       focus-within. opacity + scale + translate
                       transitions are pure CSS. pointer-events-none
-                      while collapsed prevents clicks bleeding through. */}
+                      while collapsed prevents clicks bleeding through.
+                      Note: no role="menu" / role="menuitem" — those
+                      ARIA roles imply keyboard menu semantics (arrow
+                      keys, Home/End, Escape) we don't implement. axe
+                      flags them as misused otherwise. Plain <Link>s
+                      inside a panel is the right pattern for a static
+                      navigation dropdown like this. */}
                   <div
                     className="absolute left-0 top-full pt-2 w-56 opacity-0 -translate-y-1.5 scale-[0.97] pointer-events-none transition-all duration-150 ease-out group-hover/dd:opacity-100 group-hover/dd:translate-y-0 group-hover/dd:scale-100 group-hover/dd:pointer-events-auto group-focus-within/dd:opacity-100 group-focus-within/dd:translate-y-0 group-focus-within/dd:scale-100 group-focus-within/dd:pointer-events-auto"
-                    role="menu"
                   >
                     <div className="rounded-xl bg-white shadow-2xl ring-1 ring-black/8 overflow-hidden">
                       <Link
-              prefetch={false}
+                        prefetch={false}
                         href="/services"
                         className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-brand-navy border-b border-gray-100 hover:bg-brand-orange-light transition-colors"
-                        role="menuitem"
                       >
                         All Services
                       </Link>
                       {SERVICES.map((s) => (
                         <Link
-              prefetch={false}
+                          prefetch={false}
                           key={s.slug}
                           href={s.href}
-                          className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-brand-orange-light hover:text-brand-navy transition-colors"
-                          role="menuitem"
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-orange-light hover:text-brand-navy transition-colors"
                         >
                           {s.label}
                         </Link>
@@ -231,7 +234,14 @@ export default function Header() {
       {/* ── Mobile slide-down menu ────────────────────────────────
           The grid-rows 0fr → 1fr trick animates height:auto without
           having to measure the content. Inner div sets overflow-hidden
-          so children clip during the transition. */}
+          so children clip during the transition.
+
+          `inert` (HTML standard) is used instead of `aria-hidden`
+          because `aria-hidden` only hides from screen readers — Tab
+          can still land on the buried Links. axe flags that as
+          "[aria-hidden] elements contain focusable descendants".
+          `inert` removes the subtree from BOTH the focus order and
+          the a11y tree. */}
       <div
         id="mobile-nav"
         className={`lg:hidden grid border-t border-white/10 transition-all duration-250 ease-out overflow-hidden ${
@@ -239,7 +249,7 @@ export default function Header() {
             ? "grid-rows-[1fr] opacity-100 border-white/10"
             : "grid-rows-[0fr] opacity-0 border-transparent pointer-events-none"
         }`}
-        aria-hidden={!mobileOpen}
+        inert={!mobileOpen}
       >
         <div className="overflow-hidden">
           <nav
@@ -261,13 +271,17 @@ export default function Header() {
                     />
                   </button>
 
-                  {/* Same grid-rows trick for the services accordion. */}
+                  {/* Same grid-rows trick for the services accordion.
+                      `inert` when collapsed so the buried links are
+                      excluded from tab order — same fix as the parent
+                      mobile menu. */}
                   <div
                     className={`grid transition-all duration-200 ease-out overflow-hidden ${
                       mobileServicesOpen
                         ? "grid-rows-[1fr] opacity-100"
                         : "grid-rows-[0fr] opacity-0"
                     }`}
+                    inert={!mobileServicesOpen}
                   >
                     <div className="overflow-hidden ml-3 mt-1 pl-3 border-l-2 border-brand-orange/30 space-y-0.5">
                       <Link
