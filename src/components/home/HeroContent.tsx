@@ -90,7 +90,7 @@ export default function HeroContent() {
           style={delayStyle(3)}
         >
           <Link
-            href="#contact"
+            href="/contact"
             className="group inline-flex items-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-bold text-brand-navy-dark shadow-lg shadow-brand-orange/30 transition-all duration-200 hover:bg-brand-orange-hover hover:shadow-xl hover:shadow-brand-orange/40 active:scale-[0.97]"
           >
             Get a Free Estimate
