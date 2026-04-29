@@ -5,11 +5,13 @@ import HeroContent from "./HeroContent";
  * HeroSection — React Server Component.
  *
  * Static shell only: the <section> container, background <Image>, and
- * gradient overlays are all rendered on the server.  All Framer Motion
- * animations live in the HeroContent client component below.
+ * gradient overlays are all rendered on the server. HeroContent is
+ * also a server component (zero client JS) using CSS-only animations.
  *
- * Swap the `src` string below with your own photo once you have one.
- * Any https://images.unsplash.com URL is already allowed in next.config.ts.
+ * The background image lives at /public/images/hero.jpg (2400×1600).
+ * Self-hosting eliminates the third-party request to Unsplash on the
+ * critical path; Next encodes AVIF/webp variants at request time and
+ * caches them at the edge.
  */
 export default function HeroSection() {
   return (
@@ -17,21 +19,17 @@ export default function HeroSection() {
       className="relative flex min-h-[92vh] items-center overflow-hidden"
       aria-label="Welcome"
     >
-      {/* ── Background image ──────────────────────────────────────
-           fill + priority → LCP element, loaded immediately.
-           Replace src with a real project photo when available.   */}
-      {/*
-        TODO: Replace this stock photo with a real Chimneys Plus project photo.
-        Ideal shot: technician on a roof or a clean Wisconsin chimney against blue sky.
-        Minimum size: 2400×1600px. Save to /public/images/hero.jpg and update src below.
-        Good free sources: your own phone camera, or https://unsplash.com (search "chimney roof Wisconsin")
-      */}
+      {/* ── Background image — LCP element ────────────────────────
+           - fill + priority preloads it as part of the initial HTML
+           - quality 80 because Next re-encodes to AVIF anyway, and
+             the source JPEG is already optimised at q≈80
+           - sizes="100vw" matches the full-width layout            */}
       <Image
-        src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2400&q=80"
+        src="/images/hero.jpg"
         alt="A well-maintained home with a clean chimney and roof"
         fill
         priority
-        quality={85}
+        quality={80}
         className="object-cover object-center"
         sizes="100vw"
       />

@@ -1,32 +1,24 @@
-"use client";
-
-import { motion, cubicBezier } from "framer-motion";
 import Link from "next/link";
 import { Phone, ArrowRight, CheckCircle2, ChevronDown, Star } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 
-// ── Animation variants ────────────────────────────────────────────
-
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.13,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, ease: cubicBezier(0.22, 1, 0.36, 1) },
-  },
-};
-
-// ── Trust signals ─────────────────────────────────────────────────
+/**
+ * HeroContent — React Server Component.
+ *
+ * Previously this was a Client Component that ran framer-motion to
+ * stagger-fade the headline / CTAs / trust signals on mount. Because
+ * the hero is on the LCP critical path, that JS was a measurable
+ * bottleneck — a marketing site shouldn't spin up an animation engine
+ * just to play one entrance animation.
+ *
+ * The same visual effect is now achieved with CSS-only:
+ *   - `animate-hero-fade` keyframes (defined in globals.css)
+ *   - per-child `animation-delay` for the staggered cascade
+ *   - `motion-reduce:animate-none` honours prefers-reduced-motion
+ *
+ * Net result: zero client JS for the hero text block, no hydration
+ * cost, and the LCP image gets out the door faster.
+ */
 
 const TRUST_SIGNALS = [
   "Licensed & Insured",
@@ -35,50 +27,58 @@ const TRUST_SIGNALS = [
   "Locally Owned & Operated",
 ] as const;
 
-// ─────────────────────────────────────────────────────────────────
+// Stagger cascade: each step fires 130 ms after the previous one,
+// matching the framer-motion staggerChildren value we replaced.
+const STAGGER_MS = 130;
+const BASE_DELAY_MS = 100;
+
+function delayStyle(step: number): React.CSSProperties {
+  return { animationDelay: `${BASE_DELAY_MS + step * STAGGER_MS}ms` };
+}
+
+const FADE_CLS =
+  "opacity-0 motion-safe:animate-hero-fade motion-reduce:opacity-100";
 
 export default function HeroContent() {
   return (
     <>
-      {/* ── Staggered content block ──────────────────────────── */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="max-w-2xl"
-      >
+      {/* ── Staggered content block ─────────────────────────────
+          No motion.div wrapper anymore — each child runs its own
+          CSS animation with a hand-tuned delay. */}
+      <div className="max-w-2xl">
+
         {/* Eyebrow */}
-        <motion.div variants={fadeUp} className="mb-5">
+        <div className={`mb-5 ${FADE_CLS}`} style={delayStyle(0)}>
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/15 px-4 py-1.5 text-xs font-bold tracking-widest text-brand-orange uppercase backdrop-blur-sm">
             {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}
           </span>
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.h1
-          variants={fadeUp}
-          className="font-heading text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[66px]"
+        <h1
+          className={`font-heading text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[66px] ${FADE_CLS}`}
+          style={delayStyle(1)}
         >
           Expert Chimney, Roofing{" "}
           <span className="text-brand-orange">&amp; Exterior Services</span>
           <span className="block mt-1 text-white">in {COMPANY.location.city} &amp; {COMPANY.location.region}, {COMPANY.location.state}</span>
-        </motion.h1>
+        </h1>
 
         {/* Sub-headline */}
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 max-w-xl text-[17px] leading-relaxed text-white/75 sm:text-lg"
+        <p
+          className={`mt-6 max-w-xl text-[17px] leading-relaxed text-white/75 sm:text-lg ${FADE_CLS}`}
+          style={delayStyle(2)}
         >
           {/* TODO: Update founding year and homeowner count */}
           Keeping your home safe, warm, and protected through harsh winters
           since 2015. Trusted by hundreds of local homeowners — from
           chimney inspections to full roof replacements.
-        </motion.p>
+        </p>
 
         {/* CTAs */}
-        <motion.div
-          variants={fadeUp}
-          className="mt-9 flex flex-wrap items-center gap-4"
+        <div
+          className={`mt-9 flex flex-wrap items-center gap-4 ${FADE_CLS}`}
+          style={delayStyle(3)}
         >
           <Link
             href="#contact"
@@ -95,12 +95,12 @@ export default function HeroContent() {
             <Phone className="h-4 w-4 shrink-0" strokeWidth={2.5} />
             Call {COMPANY.phone.main}
           </a>
-        </motion.div>
+        </div>
 
         {/* Review badge */}
-        <motion.div
-          variants={fadeUp}
-          className="mt-8 flex items-center gap-3"
+        <div
+          className={`mt-8 flex items-center gap-3 ${FADE_CLS}`}
+          style={delayStyle(4)}
         >
           <div className="flex items-center gap-1" aria-label="4.9 out of 5 stars">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -119,12 +119,12 @@ export default function HeroContent() {
           <span className="text-sm text-white/70">
             — 10+ Reviews on Google
           </span>
-        </motion.div>
+        </div>
 
         {/* Trust signals */}
-        <motion.ul
-          variants={fadeUp}
-          className="mt-4 flex flex-wrap gap-x-6 gap-y-2.5"
+        <ul
+          className={`mt-4 flex flex-wrap gap-x-6 gap-y-2.5 ${FADE_CLS}`}
+          style={delayStyle(5)}
           aria-label="Credentials and certifications"
         >
           {TRUST_SIGNALS.map((signal) => (
@@ -137,34 +137,25 @@ export default function HeroContent() {
               {signal}
             </li>
           ))}
-        </motion.ul>
-      </motion.div>
+        </ul>
+      </div>
 
-      {/* ── Scroll indicator ─────────────────────────────────────
-           Positions absolute within the parent <section> (relative).
-           Excluded from the stagger chain — fades in separately. */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.7 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+      {/* ── Scroll indicator ────────────────────────────────────
+           Fades in late and bobs forever via two stacked CSS
+           animations on the icon. */}
+      <div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-0 motion-safe:animate-hero-fade motion-reduce:opacity-100"
+        style={{ animationDelay: "1400ms" }}
         aria-hidden="true"
       >
         <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/50">
           Scroll
         </span>
-        <motion.div
-          animate={{ y: [0, 7, 0] }}
-          transition={{
-            repeat: Infinity,
-            duration: 1.7,
-            ease: "easeInOut",
-            delay: 1.6,
-          }}
-        >
-          <ChevronDown className="h-5 w-5 text-white/50" strokeWidth={1.5} />
-        </motion.div>
-      </motion.div>
+        <ChevronDown
+          className="h-5 w-5 text-white/50 motion-safe:animate-hero-bob"
+          strokeWidth={1.5}
+        />
+      </div>
     </>
   );
 }

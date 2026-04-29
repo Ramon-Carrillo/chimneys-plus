@@ -169,3 +169,35 @@
     font-family: var(--font-montserrat), var(--font-inter), sans-serif;
   }
 }
+
+/*
+ * Hero animations — pure CSS replacements for the framer-motion
+ * stagger that used to live in HeroContent.tsx. Keeping these in
+ * globals.css means the hero text block can render as a server
+ * component (no client JS, no hydration cost on the LCP path).
+ *
+ * `animate-hero-fade` is the staggered fade-up; per-child
+ * `animation-delay` (set inline via the React component) sequences
+ * the cascade. `animate-hero-bob` is the infinite scroll-cue bob.
+ *
+ * Both keyframes are gated behind `motion-safe:` in the markup, so
+ * users with `prefers-reduced-motion: reduce` see the final state
+ * instantly with zero animation work.
+ */
+@keyframes hero-fade {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes hero-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(7px); }
+}
+
+.animate-hero-fade {
+  animation: hero-fade 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-bob {
+  animation: hero-bob 1700ms ease-in-out 1600ms infinite;
+}
